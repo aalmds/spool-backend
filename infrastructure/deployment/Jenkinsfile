@@ -39,26 +39,26 @@ pipeline {
                 script { // Secrets deployment
 
                     withKubeConfig([credentialsId: 'kubeconfig']) {
-                        sh 'sed -i "s/__DB_NAME__/$dbName/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__DB_PASSWORD__/$dbPassword/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__DB_USERNAME__/$dbUsername/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__DB_HOST__/$dbHost/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__DB_PORT__/$dbPort/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__ENV__/$appEnv/g" ./k8s/secrets.yaml'
-                        sh 'sed -i "s/__PORT__/$appPort/g" ./k8s/secrets.yaml'
-                        sh 'kubectl apply -f ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_NAME__/$dbName/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_PASSWORD__/$dbPassword/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_USERNAME__/$dbUsername/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_HOST__/$dbHost/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_PORT__/$dbPort/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__ENV__/$appEnv/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'sed -i "s/__PORT__/$appPort/g" ./infrastructure/k8s/secrets.yaml'
+                        sh 'kubectl apply -f ./infrastructure/k8s/secrets.yaml'
                     }
                 }
 
                 script { // database deployment
                     withKubeConfig([credentialsId: 'kubeconfig']) {
-                        sh 'kubectl apply -f ./k8s/deployment-database.yaml'
+                        sh 'kubectl apply -f ./infrastructure/k8s/deployment-database.yaml'
                     }
                 }
 
                 script { // api deployment
                     withKubeConfig([credentialsId: 'kubeconfig']) {
-                        sh 'sed -i "s/{{TAG}}/$tag_version/g" ./k8s/deployment-api.yaml'
+                        sh 'sed -i "s/{{TAG}}/$tag_version/g" ./infrastructure/k8s/deployment-api.yaml'
                         sh 'kubectl apply -f ./k8s/deployment-api.yaml'
                     }
                 }
