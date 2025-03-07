@@ -71,7 +71,7 @@ pipeline {
                 script { // api deployment
                     withKubeConfig([credentialsId: 'kubeconfig']) {
                         sh 'sed -i "s/{{TAG}}/$tag_version/g" ./infrastructure/k8s/deployment-api.yaml'
-                        sh 'kubectl apply -f ./k8s/deployment-api.yaml'
+                        sh 'kubectl apply -f ./infrastructure/k8s/deployment-api.yaml'
                     }
                 }
             }
