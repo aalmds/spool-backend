@@ -1,0 +1,71 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage ('Build Docker Image') {
+            steps {
+                script {
+                    dockerapp = docker.build("iankts/spool-api:${env.BUILD_ID}", "-f ./Dockerfile .")
+                }
+            }
+        }
+
+        stage ('Push Docker Image') {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker-key') {
+                        dockerapp.push('latest')
+                        dockerapp.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }
+
+        stage ('Deploy Kubernetes') {
+
+            environment {
+                tag_version = "${env.BUILD_ID}"
+            }
+
+            steps {
+                secrets {
+
+                    def dbName = credentials("DB_NAME")
+                    def dbPassword = credentials("DB_PASSWORD")
+                    def dbUsername = credentials("DB_USERNAME")
+                    def dbHost = credentials("DB_HOST")
+                    def dbPort = credentials("DB_PORT")
+                    def appEnv = credentials("APP_ENV")
+                    def appPort = credentials("APP_PORT")
+
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        sh 'sed -i "s/__DB_NAME__/$dbName/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_PASSWORD__/$dbPassword/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_USERNAME__/$dbUsername/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_HOST__/$dbHost/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__DB_PORT__/$dbPort/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__ENV__/$appEnv/g" ./k8s/secrets.yaml'
+                        sh 'sed -i "s/__PORT__/$appPort/g" ./k8s/secrets.yaml'
+                        sh 'kubectl apply -f ./k8s/secrets.yaml'
+                    }
+                }
+
+                databaseDeployment {
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        sh 'kubectl apply -f ./k8s/deployment-database.yaml'
+                    }
+                }
+
+                apiDeployment {
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        sh 'sed -i "s/{{TAG}}/$tag_version/g" ./k8s/deployment-api.yaml'
+                        sh 'kubectl apply -f ./k8s/deployment-api.yaml'
+                    }
+                }
+            }
+
+        }
+
+    }
+}
