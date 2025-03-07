@@ -36,7 +36,7 @@ pipeline {
             }
 
             steps {
-                secrets {
+                script { // Secrets deployment
 
                     withKubeConfig([credentialsId: 'kubeconfig']) {
                         sh 'sed -i "s/__DB_NAME__/$dbName/g" ./k8s/secrets.yaml'
@@ -50,13 +50,13 @@ pipeline {
                     }
                 }
 
-                databaseDeployment {
+                script { // database deployment
                     withKubeConfig([credentialsId: 'kubeconfig']) {
                         sh 'kubectl apply -f ./k8s/deployment-database.yaml'
                     }
                 }
 
-                apiDeployment {
+                script { // api deployment
                     withKubeConfig([credentialsId: 'kubeconfig']) {
                         sh 'sed -i "s/{{TAG}}/$tag_version/g" ./k8s/deployment-api.yaml'
                         sh 'kubectl apply -f ./k8s/deployment-api.yaml'
