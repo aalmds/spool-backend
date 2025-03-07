@@ -21,6 +21,17 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 3000
+        env:
+        - name: ENV
+          valueFrom:
+            secretKeyRef:
+              name: spool-secrets
+              key: ENV
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+              name: spool-secrets
+              key: PORT
 ---
 apiVersion: v1
 kind: Service
