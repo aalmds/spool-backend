@@ -18,7 +18,7 @@ resource "digitalocean_droplet" "jenkins" {
   image    = "ubuntu-20-04-x64"
   name     = "jenkins"
   region   = var.region
-  size     = "s-1vcpu-1gb"
+  size     = "s-2vcpu-2gb"
   ssh_keys = [data.digitalocean_ssh_key.ssh_key.fingerprint]
 }
 
