@@ -1,0 +1,82 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage ('Build Docker Image') {
+            steps {
+                script {
+                    dockerapp = docker.build("iankts/spool-api:${env.BUILD_ID}", "-f ./Dockerfile .")
+                }
+            }
+        }
+
+        stage ('Push Docker Image') {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                        dockerapp.push('latest')
+                        dockerapp.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }
+
+        stage ('Deploy Kubernetes') {
+
+            environment {
+                tag_version = "${env.BUILD_ID}"
+                dbName = credentials("DB_NAME")
+                dbPassword = credentials("DB_PASSWORD")
+                dbUsername = credentials("DB_USERNAME")
+                dbHost = credentials("DB_HOST")
+                dbPort = credentials("DB_PORT")
+                appEnv = credentials("APP_ENV")
+                appPort = credentials("APP_PORT")
+            }
+
+            steps {
+                script { // Secrets deployment
+
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        script {
+                            def encodedDbName = sh(script: "echo -n '${dbName}' | base64", returnStdout: true).trim()
+                            def encodedDbPassword = sh(script: "echo -n '${dbPassword}' | base64", returnStdout: true).trim()
+                            def encodedDbUsername = sh(script: "echo -n '${dbUsername}' | base64", returnStdout: true).trim()
+                            def encodedDbHost = sh(script: "echo -n '${dbHost}' | base64", returnStdout: true).trim()
+                            def encodedDbPort = sh(script: "echo -n '${dbPort}' | base64", returnStdout: true).trim()
+                            def encodedAppEnv = sh(script: "echo -n '${appEnv}' | base64", returnStdout: true).trim()
+                            def encodedAppPort = sh(script: "echo -n '${appPort}' | base64", returnStdout: true).trim()
+
+                            sh """
+                                sed -i "s|__DB_NAME__|${encodedDbName}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__DB_PASSWORD__|${encodedDbPassword}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__DB_USERNAME__|${encodedDbUsername}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__DB_HOST__|${encodedDbHost}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__DB_PORT__|${encodedDbPort}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__ENV__|${encodedAppEnv}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__PORT__|${encodedAppPort}|g" ./infrastructure/k8s/secrets.yaml
+                                kubectl apply -f ./infrastructure/k8s/secrets.yaml
+                            """
+                        }
+                    }
+                }
+
+                script { // database deployment
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        sh 'kubectl apply -f ./infrastructure/k8s/deployment-database.yaml'
+                    }
+                }
+
+                script { // api deployment
+                    withKubeConfig([credentialsId: 'kubeconfig']) {
+                        sh 'sed -i "s/{{TAG}}/$tag_version/g" ./infrastructure/k8s/deployment-api.yaml'
+                        sh 'kubectl apply -f ./infrastructure/k8s/deployment-api.yaml'
+                    }
+                }
+            }
+
+        }
+
+    }
+}
