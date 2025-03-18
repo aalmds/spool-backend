@@ -8,34 +8,34 @@ datasource db {
 }
 
 model Educationist {
-  id             Int    @id @default(autoincrement())
+  id             Int                 @id @default(autoincrement())
   name           String
-  email          String @unique
+  email          String              @unique
   specialization String?
   children       ChildEducationist[]
-  createdAt      DateTime @default(now())
+  createdAt      DateTime            @default(now())
 }
 
 model Therapist {
-  id            Int    @id @default(autoincrement())
+  id            Int              @id @default(autoincrement())
   name          String
-  email         String @unique
-  licenseNumber String @unique
+  email         String           @unique
+  licenseNumber String           @unique
   children      ChildTherapist[]
-  createdAt     DateTime @default(now())
+  createdAt     DateTime         @default(now())
 }
 
 model Child {
-  id            Int    @id @default(autoincrement())
+  id            Int                 @id @default(autoincrement())
   name          String
   parentName    String
-  email         String @unique
+  email         String              @unique
   birthDate     DateTime
   supportLevel  Int?
   educationists ChildEducationist[]
   therapists    ChildTherapist[]
   records       Record[]
-  createdAt     DateTime @default(now())
+  createdAt     DateTime            @default(now())
 }
 
 model ChildEducationist {
@@ -43,6 +43,7 @@ model ChildEducationist {
   childId        Int
   educationist   Educationist @relation(fields: [educationistId], references: [id])
   educationistId Int
+
   @@id([childId, educationistId])
 }
 
@@ -51,25 +52,27 @@ model ChildTherapist {
   childId     Int
   therapist   Therapist @relation(fields: [therapistId], references: [id])
   therapistId Int
+
   @@id([childId, therapistId])
 }
 
 model Record {
-  id         Int    @id @default(autoincrement())
-  child      Child  @relation(fields: [childId], references: [id])
+  id         Int          @id @default(autoincrement())
+  child      Child        @relation(fields: [childId], references: [id])
   childId    Int
   authorId   Int
   authorRole String
   content    String
-  createdAt  DateTime @default(now())
+  createdAt  DateTime     @default(now())
   reads      RecordRead[]
 }
 
 model RecordRead {
-  record   Record   @relation(fields: [recordId], references: [id])
+  record   Record    @relation(fields: [recordId], references: [id])
   recordId Int
   userId   Int
   userRole String
   readAt   DateTime?
+
   @@id([recordId, userId, userRole])
 }
