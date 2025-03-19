@@ -153,7 +153,7 @@ async function main() {
     ...allChildren.map(child => child.id)
   ];
 
-  for (let i = 0; i < allRecords.length; i++) {
+  for (let i = 0; i < allRecords.length/2; i++) {
     
     const randomUsers = allUsersIds.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 5) + 1); 
     for (const userId of randomUsers) {
