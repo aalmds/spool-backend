@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { initStatusRoutes } from './common/init-routes';
 
 const router = Router();
 
@@ -15,8 +16,7 @@ router.get('/child/:childId/educationist');
 router.get('/child/:childId/therapist');
 
 // Routes for status
-router.get('/read/:recordId');
-router.post('/read', );
+initStatusRoutes(router);
 
 // Routes for symptoms
 router.get('/symptoms');
