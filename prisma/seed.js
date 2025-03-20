@@ -162,6 +162,15 @@ async function main() {
       if (allEducationists.find(edu => edu.id === userId)) userRole = 'Educationist';
       if (allTherapists.find(therapist => therapist.id === userId)) userRole = 'Therapist';
 
+      // if the user already read the record, skip this iteration
+      const recordRead = await prisma.recordRead.findFirst({
+        where: {
+          recordId: allRecords[i].id,
+          userId: userId,
+        },
+      });
+      if (recordRead) continue;
+
       await prisma.recordRead.create({
         data: {
           recordId: allRecords[i].id,
