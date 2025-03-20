@@ -1,18 +1,29 @@
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-
-    /* Language and Environment */
-    "target": "ES2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-
-    /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
-
-    /* Emit */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-
-    /* Type Checking */
-    "strict": true,                                      /* Enable all strict type-checking options. */
-  }
-}
+   "compilerOptions": {
+     /* Visit https://aka.ms/tsconfig to read more about this file */
+ 
+     /* Language and Environment */
+     "target": "ES2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+ 
+     /* Modules */
+     "module": "commonjs",                                /* Specify what module code is generated. */
+     "rootDir": "src",                                    /* Specify the root folder for input files. */
+     "outDir": "dist",                                    /* Redirect output structure to the 'dist' folder. */
+ 
+     /* Emit */
+     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. */
+     "forceConsistentCasingInFileNames": true,             /* Ensure that casing is correct in imports. */
+     "sourceMap": true,                                   /* Generate source maps for easier debugging. */
+     "removeComments": true,                              /* Remove comments from emitted files. */
+ 
+     /* Type Checking */
+     "strict": true,                                      /* Enable all strict type-checking options. */
+ 
+     /* Additional Settings */
+     "skipLibCheck": true,                                /* Skip type checking of declaration files. */
+     "resolveJsonModule": true                            /* Allow importing .json files. */
+   },
+   "include": ["src/**/*.ts"],                             /* Include all TypeScript files in the 'src' folder. */
+   "exclude": ["node_modules"]                             /* Exclude the 'node_modules' folder. */
+ }
+ 
