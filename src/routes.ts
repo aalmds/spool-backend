@@ -1,15 +1,9 @@
 import { Router } from 'express';
-import { initStatusRoutes } from './common/init-routes';
-
+import { initRecordRoutes, initStatusRoutes } from './common/init-routes';
 const router = Router();
 
 // Routes group for record
-router.get('/record/child/:childId', );
-router.get('/record/child/:childId/therapist/:therapistId', );
-router.get('/record/child/:childId/educationist/:educationistId', );
-router.get('/record/educationist/:educationistId', );
-router.get('/record/therapist/:therapistId', );
-router.post('/record');
+initRecordRoutes(router);
 
 // Routes group for child
 router.get('/child/:childId/educationist');
