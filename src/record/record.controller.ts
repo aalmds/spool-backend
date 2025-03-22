@@ -19,7 +19,7 @@ class RecordController {
             const { filter, limit, page } = req.query;
             const records = await this.recordService.getRecordsByChild(
                 childId,
-                filter as string,
+                Number(filter),
                 Number(limit),
                 Number(page));
             new SuccessResult({
@@ -68,7 +68,7 @@ class RecordController {
     async getByTherapist(req: Request, res: Response) : Promise<void> {
         try {
             const therapistId = Number(req.params.therapistId);
-            const status = req.query.status as string;
+            const status = req.query.status === 'true' ? true : req.query.status === 'false' ? false : undefined;
             const records = await this.recordService.getRecordsByTherapist(therapistId, status);
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
@@ -84,7 +84,7 @@ class RecordController {
     async getByEducationist(req: Request, res: Response) : Promise<void> {
         try {
             const educationistId = Number(req.params.educationistId);
-            const status = req.query.status as string;
+            const status = req.query.status === 'true' ? true : req.query.status === 'false' ? false : undefined;
             const records = await this.recordService.getRecordsByEducationist(educationistId, status);
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),

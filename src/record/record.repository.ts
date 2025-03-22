@@ -3,7 +3,6 @@ import { Errors } from '../common/errors';
 
 class RecordRepository {
   private prisma: PrismaClient;
-
   constructor() {
     this.prisma = new PrismaClient();
   }
@@ -13,7 +12,7 @@ class RecordRepository {
       return await this.prisma.record.findMany({
         where: { 
           childId,
-          ...(role && { authorRole: role }),
+          ...(role && { authorRole: { equals: role, mode: "insensitive" } }),
         },
         take: limit,
         skip: (page - 1) * limit,
@@ -55,13 +54,16 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByTherapist(therapistId: number, status?: string): Promise<any[]> {
+  public async getRecordsByTherapist(therapistId: number, status?: boolean): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
           child: { therapists: { some: { therapistId } } },
-          ...(status === 'unread' && {
-            reads: { none: { userId: therapistId, userRole: 'Therapist'} }
+          ...(status === false && {
+            reads: { none: { 
+              userId: therapistId, 
+              userRole: { contains: 'Therapist', mode: 'insensitive' }
+            }}
           })
         },
         orderBy: { createdAt: 'desc' },
@@ -72,13 +74,16 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByEducationist(educationistId: number, status?: string): Promise<any[]> {
+  public async getRecordsByEducationist(educationistId: number, status?: boolean): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
           child: { educationists: { some: { educationistId } } },
-          ...(status === 'unread' && {
-            reads: { none: { userId: educationistId, userRole: 'Educationist'} }
+          ...(status === false && {
+            reads: { none: { 
+              userId: educationistId, 
+              userRole: { contains: 'Educationist', mode: 'insensitive' }
+            }}
           })
         },
         orderBy: { createdAt: 'desc' },

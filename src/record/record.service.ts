@@ -2,20 +2,21 @@ import RecordRepository from "./record.repository";
 
 class RecordService {
     private recordRepository: RecordRepository;
-    private validRoles = ['Educationist', 'Therapist', 'Child'];
+    private validRoles = ['Child','Educationist', 'Therapist'];
     constructor(recordRepository: RecordRepository) {
         this.recordRepository = recordRepository;
     }
 
-  async getRecordsByChild(childId: number, authorRole?: string, limit?: number, page?: number) {
-    if (authorRole && !this.validRoles.includes(authorRole)) {
-      throw new Error('Invalid role');
+  async getRecordsByChild(childId: number, authorRole?: number, limit?: number, page?: number) {
+    const role = authorRole !== undefined ? this.validRoles[authorRole] : undefined;
+    if (role && !this.validRoles.includes(role)) {
+        throw new Error('Invalid role');
     }
 
     page = page || 1;
     limit = limit || 10;
 
-    return this.recordRepository.getRecordsByChild(childId, limit, page, authorRole);
+    return this.recordRepository.getRecordsByChild(childId, limit, page, role);
   }
 
   async getRecordsByChildAndTherapist(childId: number, therapistId: number) {
@@ -26,12 +27,12 @@ class RecordService {
     return this.recordRepository.getRecordsByChildAndEducationist(childId, educationistId);
   }
 
-  async getRecordsByTherapist(therapistId: number, status?: string) {
+  async getRecordsByTherapist(therapistId: number, status?: boolean) {
 
     return this.recordRepository.getRecordsByTherapist(therapistId, status);
   }
 
-  async getRecordsByEducationist(educationistId: number, status?: string) {
+  async getRecordsByEducationist(educationistId: number, status?: boolean) {
     return this.recordRepository.getRecordsByEducationist(educationistId, status);
   }
 }
