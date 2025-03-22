@@ -9,8 +9,8 @@ class EducationistRoutesService {
    
 
 
-   getChildren(educationistId: number) {
-      return this.educationistRoutesRepository.getChildren(educationistId);
+   getEducationist(ChildId: number, filter: string) {
+      return this.educationistRoutesRepository.getEducationist(ChildId, filter);
    }
 
 }

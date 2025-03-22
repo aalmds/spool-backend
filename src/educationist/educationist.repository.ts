@@ -9,18 +9,20 @@ class EducationistRoutesRepository {
   }
 
 
-  public async getChildren(educationistId: number): Promise<any> {
+  public async getEducationist(childId: number, filter: string): Promise<any> {
    try {
-     return await this.prisma.child.findMany({
+     return await this.prisma.educationist.findMany({
        where: {
-        educationists: {
+        children: {
            some: {
-            educationistId: educationistId,
+            childId: childId,
            },
          },
+         specialization: filter
        },
        select: {
-         name: true
+         name: true,
+         specialization: true
       },
      });
    } catch (e) {

@@ -9,12 +9,12 @@ class ChildRoutesService {
    
 
 
-   getEducationist(childId: number, filter: string) {
-      return this.childRoutesRepository.getChildEducationist(childId, filter);
+   getChildrenEducationist(educationistId: number) {
+      return this.childRoutesRepository.getChildrenEducationist(educationistId);
    }
 
-   getTherapist(childId: number) {
-      return this.childRoutesRepository.getChildTherapist(childId);
+   getChildrenTherapist(therapistId: number) {
+      return this.childRoutesRepository.getChildrenTherapist(therapistId);
    }
 
 }

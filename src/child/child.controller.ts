@@ -14,15 +14,14 @@ class ChildRoutesController {
       this.initRoutes();
    }
 
-   public async getEducationist(req: Request, res: Response): Promise<void> {
+   public async getChildrenEducationist(req: Request, res: Response): Promise<void> {
       try {
-         const childId = req.params.childId;
-         const { filter } = req.query;
-         const educationist = await this.childRoutesService.getEducationist(Number(childId), filter as string);
+         const educationistId = req.params.educationistId;
+         const children = await this.childRoutesService.getChildrenEducationist(Number(educationistId));
 
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
-            data: educationist,
+            data: children,
          }).handle(res);
       } catch (e) {
          new FailureResult({
@@ -31,14 +30,14 @@ class ChildRoutesController {
       }
    }
 
-   public async getTherapist(req: Request, res: Response): Promise<void> {
+   public async getChildrenTherapist(req: Request, res: Response): Promise<void> {
       try {
-         const { childId } = req.params;
-         const therapist = await this.childRoutesService.getTherapist(Number(childId));
+         const { therapistId } = req.params;
+         const children = await this.childRoutesService.getChildrenTherapist(Number(therapistId));
 
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
-            data: therapist,
+            data: children,
          }).handle(res);
       } catch (e) {
          new FailureResult({
@@ -48,8 +47,8 @@ class ChildRoutesController {
    }
 
    public initRoutes() {
-      this.router.get('/child/:childId/educationist', (req, res) => this.getEducationist(req, res));
-      this.router.get('/child/:childId/therapist', (req, res) => this.getTherapist(req, res));
+      this.router.get('/child/educationist/:educationistId', (req, res) => this.getChildrenEducationist(req, res));
+      this.router.get('/child/therapist/:therapistId', (req, res) => this.getChildrenTherapist(req, res));
    }
 
 }

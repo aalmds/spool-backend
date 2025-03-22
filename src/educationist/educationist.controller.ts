@@ -14,14 +14,15 @@ class EducationistRoutesController {
       this.initRoutes();
    }
 
-   public async getChildren(req: Request, res: Response): Promise<void> {
+   public async getEducationist(req: Request, res: Response): Promise<void> {
       try {
-         const { educationistId } = req.params;
-         const children = await this.educationistRoutesService.getChildren(Number(educationistId));
+         const childId = Number(req.params.childId);
+         const { filter } = req.query;
+         const educationists = await this.educationistRoutesService.getEducationist(Number(childId), filter as string);
 
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
-            data: children,
+            data: educationists,
          }).handle(res);
       } catch (e) {
          new FailureResult({
@@ -32,7 +33,7 @@ class EducationistRoutesController {
 
 
    public initRoutes() {
-      this.router.get('/educationist/:educationistId/child', (req, res) => this.getChildren(req, res));
+      this.router.get('/educationist/:childId', (req, res) => this.getEducationist(req, res));
    }
 
 }
