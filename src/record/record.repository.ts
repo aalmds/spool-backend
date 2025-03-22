@@ -24,13 +24,15 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByChildAndTherapist(childId: number, therapistId: number): Promise<any[]> {
+  public async getRecordsByChildAndTherapist(childId: number, therapistId: number, limit: number, page: number): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
           childId,
           child: { therapists: { some: { therapistId } } },
         },
+        take: limit,
+        skip: (page - 1) * limit,
         orderBy: { createdAt: 'desc' },
       });
     } catch (e) {
@@ -39,13 +41,15 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByChildAndEducationist(childId: number, educationistId: number): Promise<any[]> {
+  public async getRecordsByChildAndEducationist(childId: number, educationistId: number, limit: number, page: number): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
           childId,
           child: { educationists: { some: { educationistId } } },
         },
+        take: limit,
+        skip: (page - 1) * limit,
         orderBy: { createdAt: 'desc' },
       });
     } catch (e) {
@@ -54,7 +58,7 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByTherapist(therapistId: number, status?: boolean): Promise<any[]> {
+  public async getRecordsByTherapist(therapistId: number, limit: number, page: number, status?: boolean): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
@@ -66,6 +70,8 @@ class RecordRepository {
             }}
           })
         },
+        take: limit,
+        skip: (page - 1) * limit,
         orderBy: { createdAt: 'desc' },
       });
     } catch (e) {
@@ -74,7 +80,7 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByEducationist(educationistId: number, status?: boolean): Promise<any[]> {
+  public async getRecordsByEducationist(educationistId: number, limit: number, page: number, status?: boolean, ): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
@@ -86,6 +92,8 @@ class RecordRepository {
             }}
           })
         },
+        take: limit,
+        skip: (page - 1) * limit,
         orderBy: { createdAt: 'desc' },
       });
     } catch (e) {

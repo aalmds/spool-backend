@@ -36,9 +36,13 @@ class RecordController {
     async getByChildAndTherapist(req: Request, res: Response): Promise<void>  {
         try {
             const { childId, therapistId } = req.params;
-            console.log(childId, therapistId);
-            const records = await this.recordService.getRecordsByChildAndTherapist(Number(childId), Number(therapistId));
-            console.log(records);
+            const { limit, page } = req.query;
+            const records = await this.recordService.getRecordsByChildAndTherapist(
+                Number(childId),
+                Number(therapistId),
+                Number(limit),
+                Number(page)
+            );
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
                 data: records
@@ -53,7 +57,13 @@ class RecordController {
     async getByChildAndEducationist(req: Request, res: Response) : Promise<void> {
         try {
             const { childId, educationistId } = req.params;
-            const records = await this.recordService.getRecordsByChildAndEducationist(Number(childId), Number(educationistId));
+            const { limit, page } = req.query;
+            const records = await this.recordService.getRecordsByChildAndEducationist(
+                Number(childId),
+                Number(educationistId),
+                Number(limit),
+                Number(page)
+            );
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
                 data: records
@@ -68,8 +78,14 @@ class RecordController {
     async getByTherapist(req: Request, res: Response) : Promise<void> {
         try {
             const therapistId = Number(req.params.therapistId);
+            const { limit, page } = req.query;
             const status = req.query.status === 'true' ? true : req.query.status === 'false' ? false : undefined;
-            const records = await this.recordService.getRecordsByTherapist(therapistId, status);
+            const records = await this.recordService.getRecordsByTherapist(
+                therapistId, 
+                status,
+                Number(limit),
+                Number(page)
+            );
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
                 data: records
@@ -84,8 +100,14 @@ class RecordController {
     async getByEducationist(req: Request, res: Response) : Promise<void> {
         try {
             const educationistId = Number(req.params.educationistId);
+            const { limit, page } = req.query;
             const status = req.query.status === 'true' ? true : req.query.status === 'false' ? false : undefined;
-            const records = await this.recordService.getRecordsByEducationist(educationistId, status);
+            const records = await this.recordService.getRecordsByEducationist(
+                educationistId,
+                status,
+                Number(limit),
+                Number(page),
+            );
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
                 data: records
