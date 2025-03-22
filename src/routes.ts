@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { initStatusRoutes } from './common/init-routes';
+import { initStatusRoutes, initChildRoutes, initEducationistRoutes, initTherapistRoutes } from './common/init-routes';
 
 const router = Router();
 
@@ -12,8 +12,7 @@ router.get('/record/therapist/:therapistId', );
 router.post('/record');
 
 // Routes group for child
-router.get('/child/:childId/educationist');
-router.get('/child/:childId/therapist');
+initChildRoutes(router);
 
 // Routes for status
 initStatusRoutes(router);
@@ -22,10 +21,9 @@ initStatusRoutes(router);
 router.get('/symptoms');
 
 // Routes for educationist
-router.get('/educationist/:educationistId/child');
+initEducationistRoutes(router)
 
 // Routes for therapists
-router.get('/therapist/:therapistId/child');
-router.post('/therapist'); 
+initTherapistRoutes(router)
 
 export default router;
