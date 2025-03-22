@@ -2,7 +2,7 @@ import RecordRepository from "./record.repository";
 
 class RecordService {
     private recordRepository: RecordRepository;
-    private validRoles = ['Educationist', 'Therapist', 'Parent'];
+    private validRoles = ['Educationist', 'Therapist', 'Child'];
     constructor(recordRepository: RecordRepository) {
         this.recordRepository = recordRepository;
     }
