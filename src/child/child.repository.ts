@@ -9,20 +9,18 @@ class ChildRoutesRepository {
   }
 
 
-  public async getChildEducationist(childId: number, filter: string): Promise<any> {
+  public async getChildrenEducationist(educationistId: number): Promise<any> {
    try {
-     return await this.prisma.educationist.findMany({
+     return await this.prisma.child.findMany({
        where: {
-         children: {
+         educationists: {
            some: {
-            childId: childId,
+            educationistId: educationistId,
            },
          },
-         specialization: filter,
        },
        select: {
-         name: true,    
-         specialization: true,
+         name: true,
       },
      });
    } catch (e) {
@@ -31,19 +29,18 @@ class ChildRoutesRepository {
    }
  }
 
- public async getChildTherapist(childId: number): Promise<any> {
+ public async getChildrenTherapist(therapistId: number): Promise<any> {
    try {
-     return await this.prisma.therapist.findMany({
+     return await this.prisma.child.findMany({
        where: {
-         children: {
+         therapists: {
            some: {
-            childId: childId,
+            therapistId: therapistId,
            },
          },
        },
        select: {
-         name: true,    
-         licenseNumber: true,
+         name: true,
       },
      });
    } catch (e) {

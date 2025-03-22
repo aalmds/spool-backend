@@ -1,4 +1,3 @@
-import { ParsedQs } from "qs";
 import { FailureResult, Result, SuccessResult } from "../common/results";
 import TherapistRoutesService from "./therapist.service";
 import { Request, Response, Router } from "express";
@@ -14,14 +13,14 @@ class TherapistRoutesController {
       this.initRoutes();
    }
 
-   public async getChildren(req: Request, res: Response): Promise<void> {
+   public async getTherapist(req: Request, res: Response): Promise<void> {
       try {
-         const { therapisttId } = req.params;
-         const children = await this.therapistRoutesService.getChildren(Number(therapisttId));
+         const ChildId = Number(req.params.childId);
+         const therapists = await this.therapistRoutesService.getTherapist(Number(ChildId));
 
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
-            data: children,
+            data: therapists,
          }).handle(res);
       } catch (e) {
          new FailureResult({
@@ -46,7 +45,7 @@ class TherapistRoutesController {
 
 
    public initRoutes() {
-      this.router.get('/therapist/:therapistId/child', (req, res) => this.getChildren(req, res));
+      this.router.get('/therapist/:childId', (req, res) => this.getTherapist(req, res));
       this.router.post('/therapist', (req, res) => this.sendToken(req, res)); 
    }
 

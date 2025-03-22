@@ -7,10 +7,8 @@ class TherapistRoutesService {
       this.therapistRoutesRepository = therapistRoutesRepository;
    }
    
-
-
-   getChildren(therapistId: number) {
-      return this.therapistRoutesRepository.getChildren(therapistId);
+   getTherapist(ChildId: number) {
+      return this.therapistRoutesRepository.getTherapist(ChildId);
    }
 
    sendToken(therapistId: number) {

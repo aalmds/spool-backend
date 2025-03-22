@@ -9,13 +9,13 @@ class TherapistRoutesRepository {
   }
 
 
-  public async getChildren(therapistId: number): Promise<any> {
+  public async getTherapist(ChildId: number): Promise<any> {
    try {
-     return await this.prisma.child.findMany({
+     return await this.prisma.therapist.findMany({
        where: {
-        therapists: {
+        children: {
            some: {
-            therapistId: therapistId,
+            childId: ChildId,
            },
          },
        },
