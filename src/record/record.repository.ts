@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { Errors } from '../common/errors';
+import { Roles } from '../common/roles';
 
 class RecordRepository {
   private prisma: PrismaClient;
@@ -10,7 +11,7 @@ class RecordRepository {
   public async getRecordsByChild(childId: number, limit: number, page: number, role?: string): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
-        where: { 
+        where: {
           childId,
           ...(role && { authorRole: { equals: role, mode: "insensitive" } }),
         },
@@ -28,8 +29,9 @@ class RecordRepository {
     try {
       return await this.prisma.record.findMany({
         where: {
-          childId,
-          child: { therapists: { some: { therapistId } } },
+          childId: childId,
+          authorId: therapistId,
+          authorRole: Roles.Therapist,
         },
         take: limit,
         skip: (page - 1) * limit,
@@ -45,8 +47,9 @@ class RecordRepository {
     try {
       return await this.prisma.record.findMany({
         where: {
-          childId,
-          child: { educationists: { some: { educationistId } } },
+          childId: childId,
+          authorId: educationistId,
+          authorRole: Roles.Educationist,
         },
         take: limit,
         skip: (page - 1) * limit,
@@ -65,9 +68,10 @@ class RecordRepository {
           child: { therapists: { some: { therapistId } } },
           ...(status === false && {
             reads: { none: { 
-              userId: therapistId, 
-              userRole: { contains: 'Therapist', mode: 'insensitive' }
-            }}
+                userId: therapistId,
+                userRole: {contains: Roles.Therapist, mode: 'insensitive'}
+              }
+            }
           })
         },
         take: limit,
@@ -87,9 +91,10 @@ class RecordRepository {
           child: { educationists: { some: { educationistId } } },
           ...(status === false && {
             reads: { none: { 
-              userId: educationistId, 
-              userRole: { contains: 'Educationist', mode: 'insensitive' }
-            }}
+                userId: educationistId,
+                userRole: {contains: Roles.Educationist, mode: 'insensitive'}
+              }
+            }
           })
         },
         take: limit,
