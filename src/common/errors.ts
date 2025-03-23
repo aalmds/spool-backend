@@ -5,4 +5,5 @@ export enum Errors {
   GET_READ_RECORD = 'Error when getting read record from database.',
   GET_RECORDS = 'Error when getting records from database.',
   CREATE_RECORD = 'Error when creating record in database.',
+  SAVE_DEVICE_TOKEN = 'Error when saving device token in database.',
 }
