@@ -1,8 +1,9 @@
 import RecordRepository from "./record.repository";
+import { Roles } from "../common/roles";
 
 class RecordService {
   private recordRepository: RecordRepository;
-  private validRoles = ['Child','Educationist', 'Therapist'];
+  private validRoles = [Roles.Child, Roles.Educationist, Roles.Therapist];
   constructor(recordRepository: RecordRepository) {
       this.recordRepository = recordRepository;
   }
