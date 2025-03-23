@@ -1,3 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
 -- CreateTable
 CREATE TABLE "Educationist" (
     "id" SERIAL NOT NULL,
@@ -5,6 +7,7 @@ CREATE TABLE "Educationist" (
     "email" TEXT NOT NULL,
     "specialization" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "token" TEXT NOT NULL DEFAULT encode(gen_random_bytes(4), 'hex'),
 
     CONSTRAINT "Educationist_pkey" PRIMARY KEY ("id")
 );
@@ -14,8 +17,10 @@ CREATE TABLE "Therapist" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "specialization" TEXT,
     "licenseNumber" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "token" TEXT NOT NULL DEFAULT encode(gen_random_bytes(4), 'hex'),
 
     CONSTRAINT "Therapist_pkey" PRIMARY KEY ("id")
 );
@@ -26,9 +31,11 @@ CREATE TABLE "Child" (
     "name" TEXT NOT NULL,
     "parentName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "class" TEXT NOT NULL,
     "birthDate" TIMESTAMP(3) NOT NULL,
     "supportLevel" INTEGER,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "token" TEXT NOT NULL DEFAULT encode(gen_random_bytes(4), 'hex'),
 
     CONSTRAINT "Child_pkey" PRIMARY KEY ("id")
 );

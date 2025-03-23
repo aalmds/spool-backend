@@ -1,0 +1,214 @@
+[
+    {
+        "id": 1,
+        "name": "Ana Souza",
+        "email": "ana.souza@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            1,
+            5
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Carlos Mendes",
+        "email": "carlos.mendes@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            4
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Fernanda Lima",
+        "email": "fernanda.lima@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            1,
+            2,
+            15
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Roberto Alves",
+        "email": "roberto.alves@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            6,
+            10,
+            14,
+            19
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Patrícia Costa",
+        "email": "patricia.costa@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            1,
+            16,
+            20
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Marcos Oliveira",
+        "email": "marcos.oliveira@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            7,
+            8,
+            17
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Juliana Santos",
+        "email": "juliana.santos@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            5,
+            11,
+            15
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Eduardo Mendes",
+        "email": "eduardo.mendes@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            3,
+            18
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Cristina Pereira",
+        "email": "cristina.pereira@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            5,
+            9,
+            16
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Antônio Souza",
+        "email": "antonio.souza@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            3,
+            11,
+            13,
+            18,
+            20
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Isabela Gonçalves",
+        "email": "isabela.goncalves@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            12,
+            16
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Felipe Martins",
+        "email": "felipe.martins@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            1,
+            12,
+            18
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Luciana Ribeiro",
+        "email": "luciana.ribeiro@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            13,
+            14
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Gustavo Carvalho",
+        "email": "gustavo.carvalho@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            7,
+            14,
+            17
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Tatiane Lopes",
+        "email": "tatiane.lopes@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            2,
+            15
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Rodrigo Barbosa",
+        "email": "rodrigo.barbosa@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            12,
+            16
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Camila Nunes",
+        "email": "camila.nunes@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            16,
+            17
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Amanda Castro",
+        "email": "amanda.castro@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            4,
+            19
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Bruno Ferreira",
+        "email": "bruno.ferreira@example.com",
+        "specialization": "Professor(a)",
+        "children": [
+            10,
+            20
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Maria Silva",
+        "email": "maria.silva@example.com",
+        "specialization": "Cuidador(a)",
+        "children": [
+            2,
+            7,
+            20
+        ]
+    }
+]
