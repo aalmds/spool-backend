@@ -1,0 +1,210 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Ricardo Almeida",
+        "email": "ricardo.almeida@example.com",
+        "licenseNumber": "CRP-01/12345",
+        "specialization": "Psicólogo Clínico",
+        "children": [
+            7
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dra. Sofia Rocha",
+        "email": "sofia.rocha@example.com",
+        "licenseNumber": "CRP-02/12345",
+        "specialization": "Psicóloga Escolar",
+        "children": [
+            1,
+            14
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Dr. Pedro Costa",
+        "email": "pedro.costa@example.com",
+        "licenseNumber": "CREFITO-01/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            3,
+            6,
+            17
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dra. Luiza Fernandes",
+        "email": "luiza.fernandes@example.com",
+        "licenseNumber": "CRP-03/12345",
+        "specialization": "Psicóloga Clínica",
+        "children": [
+            13
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dr. Gabriel Santos",
+        "email": "gabriel.santos@example.com",
+        "licenseNumber": "CREFITO-02/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            5,
+            10
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Dra. Carla Oliveira",
+        "email": "carla.oliveira@example.com",
+        "licenseNumber": "CRP-04/12345",
+        "specialization": "Psicóloga Escolar",
+        "children": [
+            15
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Dr. Lucas Pereira",
+        "email": "lucas.pereira@example.com",
+        "licenseNumber": "CRP-05/12345",
+        "specialization": "Psicólogo Clínico",
+        "children": [
+            1,
+            8
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Dra. Mariana Gonçalves",
+        "email": "mariana.goncalves@example.com",
+        "licenseNumber": "CREFITO-03/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            12
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Dr. Rafael Martins",
+        "email": "rafael.martins@example.com",
+        "licenseNumber": "CRP-06/12345",
+        "specialization": "Psicólogo Escolar",
+        "children": [
+            11,
+            14
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Dra. Beatriz Nunes",
+        "email": "beatriz.nunes@example.com",
+        "licenseNumber": "CRP-07/12345",
+        "specialization": "Psicóloga Clínica",
+        "children": [
+            4
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Dr. Arthur Castro",
+        "email": "arthur.castro@example.com",
+        "licenseNumber": "CREFITO-04/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            17
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Dra. Laura Ferreira",
+        "email": "laura.ferreira@example.com",
+        "licenseNumber": "CRP-08/12345",
+        "specialization": "Psicóloga Escolar",
+        "children": [
+            8,
+            20
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Dr. Enzo Barbosa",
+        "email": "enzo.barbosa@example.com",
+        "licenseNumber": "CRP-09/12345",
+        "specialization": "Psicólogo Clínico",
+        "children": [
+            11
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Dra. Clara Mendes",
+        "email": "clara.mendes@example.com",
+        "licenseNumber": "CREFITO-05/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            18
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Dr. Bernardo Lopes",
+        "email": "bernardo.lopes@example.com",
+        "licenseNumber": "CRP-10/12345",
+        "specialization": "Psicólogo Escolar",
+        "children": [
+            2
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Dra. Alice Castro",
+        "email": "alice.castro@example.com",
+        "licenseNumber": "CRP-11/12345",
+        "specialization": "Psicóloga Clínica",
+        "children": [
+            19
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Dr. Davi Ribeiro",
+        "email": "davi.ribeiro@example.com",
+        "licenseNumber": "CREFITO-06/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            9
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Dra. Valentina Souza",
+        "email": "valentina.souza@example.com",
+        "licenseNumber": "CRP-12/12345",
+        "specialization": "Psicóloga Escolar",
+        "children": [
+            20
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Dr. Luiz Carvalho",
+        "email": "luiz.carvalho@example.com",
+        "licenseNumber": "CRP-13/12345",
+        "specialization": "Psicólogo Clínico",
+        "children": [
+            10
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Dra. Isabel Ferreira",
+        "email": "isabel.ferreira@example.com",
+        "licenseNumber": "CREFITO-07/54321",
+        "specialization": "Terapeuta Ocupacional",
+        "children": [
+            2,
+            5
+        ]
+    }
+]
