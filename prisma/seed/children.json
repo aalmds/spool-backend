@@ -1,0 +1,370 @@
+[
+  {
+    "id": 1,
+    "name": "Jo\u00e3o Silva",
+    "parentName": "Maria Silva",
+    "email": "maria.silva@example.com",
+    "birthDate": "2018-05-10T00:00:00Z",
+    "supportLevel": 3,
+    "educationists": [
+      5,
+      12,
+      18,
+      3
+    ],
+    "therapists": [
+      7
+    ],
+    "class": "Turma 7A"
+  },
+  {
+    "id": 2,
+    "name": "Ana Costa",
+    "parentName": "Carlos Costa",
+    "email": "carlos.costa@example.com",
+    "birthDate": "2017-08-15T00:00:00Z",
+    "supportLevel": 2,
+    "educationists": [
+      3,
+      8,
+      15,
+      1,
+      20
+    ],
+    "therapists": [
+      15,
+      20
+    ],
+    "class": "Turma 8B"
+  },
+  {
+    "id": 3,
+    "name": "Pedro Almeida",
+    "parentName": "Fernanda Almeida",
+    "email": "fernanda.almeida@example.com",
+    "birthDate": "2016-12-20T00:00:00Z",
+    "supportLevel": 4,
+    "educationists": [
+      8,
+      10
+    ],
+    "therapists": [
+      3
+    ],
+    "class": "Turma 9A"
+  },
+  {
+    "id": 4,
+    "name": "Mariana Rocha",
+    "parentName": "Ricardo Rocha",
+    "email": "ricardo.rocha@example.com",
+    "birthDate": "2019-03-25T00:00:00Z",
+    "supportLevel": 1,
+    "educationists": [
+      2,
+      18,
+      20,
+      7
+    ],
+    "therapists": [
+      10
+    ],
+    "class": "Turma 6B"
+  },
+  {
+    "id": 5,
+    "name": "Lucas Fernandes",
+    "parentName": "Patr\u00edcia Fernandes",
+    "email": "patricia.fernandes@example.com",
+    "birthDate": "2017-07-30T00:00:00Z",
+    "supportLevel": 3,
+    "educationists": [
+      1,
+      7,
+      14,
+      9
+    ],
+    "therapists": [
+      20,
+      5
+    ],
+    "class": "Turma 8A"
+  },
+  {
+    "id": 6,
+    "name": "Sofia Lima",
+    "parentName": "Roberto Lima",
+    "email": "roberto.lima@example.com",
+    "birthDate": "2016-11-05T00:00:00Z",
+    "supportLevel": 2,
+    "educationists": [
+      19,
+      4
+    ],
+    "therapists": [
+      3
+    ],
+    "class": "Turma 9B"
+  },
+  {
+    "id": 7,
+    "name": "Gabriel Santos",
+    "parentName": "Juliana Santos",
+    "email": "juliana.santos@example.com",
+    "birthDate": "2015-09-12T00:00:00Z",
+    "supportLevel": 4,
+    "educationists": [
+      14,
+      6,
+      17,
+      11,
+      20
+    ],
+    "therapists": [
+      1
+    ],
+    "class": "Turma 10A"
+  },
+  {
+    "id": 8,
+    "name": "Laura Oliveira",
+    "parentName": "Marcos Oliveira",
+    "email": "marcos.oliveira@example.com",
+    "birthDate": "2020-02-18T00:00:00Z",
+    "supportLevel": 1,
+    "educationists": [
+      6,
+      20,
+      13,
+      5
+    ],
+    "therapists": [
+      12,
+      8
+    ],
+    "class": "Turma 5B"
+  },
+  {
+    "id": 9,
+    "name": "Enzo Pereira",
+    "parentName": "Cristina Pereira",
+    "email": "cristina.pereira@example.com",
+    "birthDate": "2016-06-22T00:00:00Z",
+    "supportLevel": 3,
+    "educationists": [
+      9,
+      11,
+      16,
+      2
+    ],
+    "therapists": [
+      17
+    ],
+    "class": "Turma 9A"
+  },
+  {
+    "id": 10,
+    "name": "Valentina Souza",
+    "parentName": "Ant\u00f4nio Souza",
+    "email": "antonio.souza@example.com",
+    "birthDate": "2017-10-28T00:00:00Z",
+    "supportLevel": 2,
+    "educationists": [
+      4,
+      12,
+      18,
+      10,
+      19
+    ],
+    "therapists": [
+      5
+    ],
+    "class": "Turma 8B"
+  },
+  {
+    "id": 11,
+    "name": "Rafael Gon\u00e7alves",
+    "parentName": "Isabela Gon\u00e7alves",
+    "email": "isabela.goncalves@example.com",
+    "birthDate": "2015-04-14T00:00:00Z",
+    "supportLevel": 4,
+    "educationists": [
+      7,
+      10
+    ],
+    "therapists": [
+      13,
+      9
+    ],
+    "class": "Turma 10A"
+  },
+  {
+    "id": 12,
+    "name": "Beatriz Martins",
+    "parentName": "Felipe Martins",
+    "email": "felipe.martins@example.com",
+    "birthDate": "2020-01-19T00:00:00Z",
+    "supportLevel": 1,
+    "educationists": [
+      11,
+      16,
+      20,
+      3
+    ],
+    "therapists": [
+      8
+    ],
+    "class": "Turma 5B"
+  },
+  {
+    "id": 13,
+    "name": "Davi Ribeiro",
+    "parentName": "Luciana Ribeiro",
+    "email": "luciana.ribeiro@example.com",
+    "birthDate": "2016-09-24T00:00:00Z",
+    "supportLevel": 3,
+    "educationists": [
+      10,
+      14,
+      19,
+      5,
+      12
+    ],
+    "therapists": [
+      4
+    ],
+    "class": "Turma 9A"
+  },
+  {
+    "id": 14,
+    "name": "Helena Carvalho",
+    "parentName": "Gustavo Carvalho",
+    "email": "gustavo.carvalho@example.com",
+    "birthDate": "2017-12-30T00:00:00Z",
+    "supportLevel": 2,
+    "educationists": [
+      13,
+      5,
+      17,
+      8
+    ],
+    "therapists": [
+      9,
+      2
+    ],
+    "class": "Turma 8B"
+  },
+  {
+    "id": 15,
+    "name": "Arthur Lopes",
+    "parentName": "Tatiane Lopes",
+    "email": "tatiane.lopes@example.com",
+    "birthDate": "2015-08-05T00:00:00Z",
+    "supportLevel": 4,
+    "educationists": [
+      15,
+      3,
+      12,
+      7
+    ],
+    "therapists": [
+      6
+    ],
+    "class": "Turma 10A"
+  },
+  {
+    "id": 16,
+    "name": "Alice Barbosa",
+    "parentName": "Rodrigo Barbosa",
+    "email": "rodrigo.barbosa@example.com",
+    "birthDate": "2019-04-10T00:00:00Z",
+    "supportLevel": 1,
+    "educationists": [
+      17,
+      20,
+      1,
+      4,
+      9
+    ],
+    "therapists": [
+      2,
+      10
+    ],
+    "class": "Turma 6B"
+  },
+  {
+    "id": 17,
+    "name": "Bernardo Nunes",
+    "parentName": "Camila Nunes",
+    "email": "camila.nunes@example.com",
+    "birthDate": "2016-11-15T00:00:00Z",
+    "supportLevel": 3,
+    "educationists": [
+      3,
+      6,
+      19,
+      14
+    ],
+    "therapists": [
+      11
+    ],
+    "class": "Turma 9A"
+  },
+  {
+    "id": 18,
+    "name": "Clara Mendes",
+    "parentName": "Eduardo Mendes",
+    "email": "eduardo.mendes@example.com",
+    "birthDate": "2017-02-20T00:00:00Z",
+    "supportLevel": 2,
+    "educationists": [
+      12,
+      4,
+      16,
+      10
+    ],
+    "therapists": [
+      14,
+      7
+    ],
+    "class": "Turma 8B"
+  },
+  {
+    "id": 19,
+    "name": "Luiz Castro",
+    "parentName": "Amanda Castro",
+    "email": "amanda.castro@example.com",
+    "birthDate": "2015-07-25T00:00:00Z",
+    "supportLevel": 4,
+    "educationists": [
+      4,
+      8,
+      13,
+      18
+    ],
+    "therapists": [
+      16
+    ],
+    "class": "Turma 10A"
+  },
+  {
+    "id": 20,
+    "name": "Isabel Ferreira",
+    "parentName": "Bruno Ferreira",
+    "email": "bruno.ferreira@example.com",
+    "birthDate": "2018-05-30T00:00:00Z",
+    "supportLevel": 1,
+    "educationists": [
+      5,
+      19,
+      10,
+      2,
+      15
+    ],
+    "therapists": [
+      18,
+      3
+    ],
+    "class": "Turma 7B"
+  }
+]
