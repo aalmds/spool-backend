@@ -13,7 +13,7 @@ export function initStatusRoutes(router: Router) {
    controller.initRoutes();
 }
 export function initRecordRoutes(router: Router) {
-   const controller = new RecordController(router, injector.getService(RecordService));
+   const controller = new RecordController(router, injector.getService(RecordService), injector.getService(NotificationService));
    controller.initRoutes();
 }
 export function initNotificationRoutes(router: Router) {

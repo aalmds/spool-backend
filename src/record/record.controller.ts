@@ -1,15 +1,18 @@
 import { Errors } from "../common/errors";
 import { FailureResult, Result, SuccessResult } from "../common/results";
 import RecordService from "./record.service";
+import NotificationService from "../notification/notification.service";
 import { Router, Request, Response } from 'express';
 
 class RecordController {
     public router: Router;
     private recordService: RecordService;
+    private notificationService: NotificationService;
 
-    constructor(router: Router, recordService: RecordService) {
+    constructor(router: Router, recordService: RecordService, notificationService: NotificationService) {
         this.router = router;
         this.recordService = recordService;
+        this.notificationService = notificationService;
         this.initRoutes();
     }
 
@@ -129,6 +132,13 @@ class RecordController {
                 content,
                 symptoms
             );
+
+            await this.notificationService.broadcastNotification(
+                childId,
+                authorId,
+                authorRole
+            );
+
             new SuccessResult({
                 msg: Result.transformRequestOnMsg(req),
                 data: record
