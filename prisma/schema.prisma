@@ -13,6 +13,7 @@ model Educationist {
   email          String              @unique
   specialization String?
   token          String              @default(dbgenerated("encode(gen_random_bytes(4), 'hex')"))
+  deviceTokens   String[]
   children       ChildEducationist[]
   createdAt      DateTime            @default(now())
 }
@@ -22,6 +23,7 @@ model Therapist {
   name           String
   specialization String?
   token          String           @default(dbgenerated("encode(gen_random_bytes(4), 'hex')"))
+  deviceTokens   String[]
   email          String           @unique
   licenseNumber  String           @unique
   children       ChildTherapist[]
@@ -37,6 +39,7 @@ model Child {
   supportLevel  Int?
   class         String
   token         String              @default(dbgenerated("encode(gen_random_bytes(4), 'hex')"))
+  deviceTokens  String[]
   educationists ChildEducationist[]
   therapists    ChildTherapist[]
   records       Record[]
