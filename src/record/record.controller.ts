@@ -119,12 +119,34 @@ class RecordController {
         }
     }
 
+    async createRecord(req: Request, res: Response) : Promise<void> {
+        try {
+            const { childId, authorId, authorRole, content, symptoms } = req.body;
+            const record = await this.recordService.createRecord(
+                childId,
+                authorId,
+                authorRole,
+                content,
+                symptoms
+            );
+            new SuccessResult({
+                msg: Result.transformRequestOnMsg(req),
+                data: record
+            }).handle(res);
+        } catch (error) {
+            new FailureResult({
+                msg: Errors.CREATE_RECORD
+            }).handle(res);
+        }
+    }
+
     public initRoutes() {
         this.router.get('/record/child/:childId', async (req, res) => this.getByChild(req, res));
         this.router.get('/record/child/:childId/therapist/:therapistId', async (req, res) => this.getByChildAndTherapist(req, res));
         this.router.get('/record/child/:childId/educationist/:educationistId', async (req, res) => this.getByChildAndEducationist(req, res));
         this.router.get('/record/educationist/:educationistId', async (req, res) => this.getByEducationist(req, res));
         this.router.get('/record/therapist/:therapistId', async (req, res) => this.getByTherapist(req, res));
+        this.router.post('/record', async (req, res) => this.createRecord(req, res));
     }
 }
 
