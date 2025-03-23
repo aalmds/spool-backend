@@ -48,11 +48,17 @@ class ReadRecordController {
       try {
          const { recordId } = req.params;
          const readRecord = await this.readRecordService.getReadRecord(Number(recordId));
-
-         new SuccessResult({
-            msg: Result.transformRequestOnMsg(req),
-            data: readRecord,
-         }).handle(res);
+         
+         if (!readRecord) {
+            new FailureResult({
+               msg: Errors.GET_READ_RECORD,
+            }).handle(res);
+         } else {
+            new SuccessResult({
+               msg: Result.transformRequestOnMsg(req),
+               data: readRecord,
+            }).handle(res);
+         }
       } catch (e) {
          new FailureResult({
             msg: Errors.GET_READ_RECORD,

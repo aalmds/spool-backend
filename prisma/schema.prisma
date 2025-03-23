@@ -64,6 +64,7 @@ model Record {
   authorRole String
   content    String
   createdAt  DateTime     @default(now())
+  symptoms   String[]
   reads      RecordRead[]
 }
 
