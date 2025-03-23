@@ -153,19 +153,18 @@ async function main() {
   for (const record of records) {
     var existingRecord = await prisma.record.findFirst({
       where: {
-        content: record.content,
-        childId: record.childId,
-        authorId: record.authorId,
-        authorRole: record.authorRole
+        id: record.id,
       },
     });
     if (!existingRecord) {
       existingRecord = await prisma.record.create({
         data: {
+          id: record.id,
           childId: record.childId,
           authorId: record.authorId,
           authorRole: record.authorRole,
-          content: record.content
+          content: record.content,
+          symptoms: record.symptoms,
         },
       });
       await prisma.recordRead.create({

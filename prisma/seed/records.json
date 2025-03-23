@@ -7,7 +7,8 @@
         "symptoms": [
             "Foco",
             "Agitação"
-        ]
+        ],
+        "id": 1
     },
     {
         "childId": 11,
@@ -17,7 +18,8 @@
         "symptoms": [
             "Mau-humor",
             "Bom-humor"
-        ]
+        ],
+        "id": 2
     },
     {
         "childId": 11,
@@ -27,7 +29,8 @@
         "symptoms": [
             "Agitação",
             "Gritos"
-        ]
+        ],
+        "id": 3
     },
     {
         "childId": 2,
@@ -37,7 +40,8 @@
         "symptoms": [
             "Mau-humor",
             "Foco"
-        ]
+        ],
+        "id": 4
     },
     {
         "childId": 1,
@@ -47,7 +51,8 @@
         "symptoms": [
             "Agitação",
             "Mau-humor"
-        ]
+        ],
+        "id": 5
     },
     {
         "childId": 6,
@@ -57,7 +62,8 @@
         "symptoms": [
             "Foco",
             "Criatividade"
-        ]
+        ],
+        "id": 6
     },
     {
         "childId": 1,
@@ -67,7 +73,8 @@
         "symptoms": [
             "Foco",
             "Bom-humor"
-        ]
+        ],
+        "id": 7
     },
     {
         "childId": 1,
@@ -77,7 +84,8 @@
         "symptoms": [
             "Foco",
             "Criatividade"
-        ]
+        ],
+        "id": 8
     },
     {
         "childId": 7,
@@ -87,7 +95,8 @@
         "symptoms": [
             "Agitação",
             "Mau-humor"
-        ]
+        ],
+        "id": 9
     },
     {
         "childId": 1,
@@ -97,7 +106,8 @@
         "symptoms": [
             "Foco",
             "Bom-humor"
-        ]
+        ],
+        "id": 10
     },
     {
         "childId": 1,
@@ -107,7 +117,8 @@
         "symptoms": [
             "Foco",
             "Criatividade"
-        ]
+        ],
+        "id": 11
     },
     {
         "childId": 1,
@@ -117,7 +128,8 @@
         "symptoms": [
             "Foco",
             "Bom-humor"
-        ]
+        ],
+        "id": 12
     },
     {
         "childId": 3,
@@ -127,7 +139,8 @@
         "symptoms": [
             "Bom-humor",
             "Criatividade"
-        ]
+        ],
+        "id": 13
     },
     {
         "childId": 9,
@@ -137,10 +150,11 @@
         "symptoms": [
             "Foco",
             "Agitação"
-        ]
+        ],
+        "id": 14
     },
     {
-        "id": 21,
+        "id": 15,
         "childId": 3,
         "authorId": 8,
         "authorRole": "Educationist",
@@ -151,7 +165,7 @@
         ]
     },
     {
-        "id": 22,
+        "id": 16,
         "childId": 15,
         "authorId": 15,
         "authorRole": "Educationist",
@@ -162,7 +176,7 @@
         ]
     },
     {
-        "id": 24,
+        "id": 17,
         "childId": 12,
         "authorId": 11,
         "authorRole": "Educationist",
@@ -173,7 +187,7 @@
         ]
     },
     {
-        "id": 25,
+        "id": 18,
         "childId": 18,
         "authorId": 12,
         "authorRole": "Educationist",
@@ -184,7 +198,7 @@
         ]
     },
     {
-        "id": 27,
+        "id": 19,
         "childId": 9,
         "authorId": 9,
         "authorRole": "Educationist",
@@ -195,7 +209,7 @@
         ]
     },
     {
-        "id": 28,
+        "id": 20,
         "childId": 20,
         "authorId": 18,
         "authorRole": "Therapist",
@@ -206,7 +220,7 @@
         ]
     },
     {
-        "id": 30,
+        "id": 21,
         "childId": 14,
         "authorId": 13,
         "authorRole": "Educationist",
@@ -217,7 +231,7 @@
         ]
     },
     {
-        "id": 31,
+        "id": 22,
         "childId": 6,
         "authorId": 3,
         "authorRole": "Therapist",
@@ -228,7 +242,7 @@
         ]
     },
     {
-        "id": 33,
+        "id": 23,
         "childId": 8,
         "authorId": 6,
         "authorRole": "Educationist",
@@ -239,7 +253,7 @@
         ]
     },
     {
-        "id": 34,
+        "id": 24,
         "childId": 17,
         "authorId": 3,
         "authorRole": "Educationist",
@@ -250,7 +264,7 @@
         ]
     },
     {
-        "id": 36,
+        "id": 25,
         "childId": 10,
         "authorId": 4,
         "authorRole": "Educationist",
@@ -261,7 +275,7 @@
         ]
     },
     {
-        "id": 37,
+        "id": 26,
         "childId": 19,
         "authorId": 4,
         "authorRole": "Educationist",
@@ -272,7 +286,7 @@
         ]
     },
     {
-        "id": 39,
+        "id": 27,
         "childId": 16,
         "authorId": 17,
         "authorRole": "Educationist",
@@ -283,7 +297,7 @@
         ]
     },
     {
-        "id": 40,
+        "id": 28,
         "childId": 1,
         "authorId": 5,
         "authorRole": "Educationist",
@@ -301,7 +315,8 @@
         "symptoms": [
             "Foco",
             "Agitação"
-        ]
+        ],
+        "id": 29
     },
     {
         "childId": 2,
@@ -311,7 +326,8 @@
         "symptoms": [
             "Ansiedade",
             "Bom-humor"
-        ]
+        ],
+        "id": 30
     },
     {
         "childId": 3,
@@ -321,7 +337,8 @@
         "symptoms": [
             "Mau-humor",
             "Foco"
-        ]
+        ],
+        "id": 31
     },
     {
         "childId": 4,
@@ -331,7 +348,8 @@
         "symptoms": [
             "Distração",
             "Criatividade"
-        ]
+        ],
+        "id": 32
     },
     {
         "childId": 5,
@@ -341,7 +359,8 @@
         "symptoms": [
             "Mau-humor",
             "Motivação"
-        ]
+        ],
+        "id": 33
     },
     {
         "childId": 6,
@@ -351,7 +370,8 @@
         "symptoms": [
             "Foco",
             "Criatividade"
-        ]
+        ],
+        "id": 34
     },
     {
         "childId": 7,
@@ -361,7 +381,8 @@
         "symptoms": [
             "Agressividade",
             "Empatia"
-        ]
+        ],
+        "id": 35
     },
     {
         "childId": 8,
@@ -371,7 +392,8 @@
         "symptoms": [
             "Mau-humor",
             "Empatia"
-        ]
+        ],
+        "id": 36
     },
     {
         "childId": 9,
@@ -381,7 +403,8 @@
         "symptoms": [
             "Distração",
             "Motivação"
-        ]
+        ],
+        "id": 37
     },
     {
         "childId": 10,
@@ -391,7 +414,8 @@
         "symptoms": [
             "Ansiedade",
             "Empatia"
-        ]
+        ],
+        "id": 38
     },
     {
         "childId": 11,
@@ -401,7 +425,8 @@
         "symptoms": [
             "Mau-humor",
             "Motivação"
-        ]
+        ],
+        "id": 39
     },
     {
         "childId": 12,
@@ -411,7 +436,8 @@
         "symptoms": [
             "Foco",
             "Criatividade"
-        ]
+        ],
+        "id": 40
     },
     {
         "childId": 13,
@@ -421,7 +447,8 @@
         "symptoms": [
             "Agressividade",
             "Empatia"
-        ]
+        ],
+        "id": 41
     },
     {
         "childId": 14,
@@ -431,7 +458,8 @@
         "symptoms": [
             "Mau-humor",
             "Empatia"
-        ]
+        ],
+        "id": 42
     },
     {
         "childId": 15,
@@ -441,7 +469,8 @@
         "symptoms": [
             "Distração",
             "Foco"
-        ]
+        ],
+        "id": 43
     },
     {
         "childId": 16,
@@ -451,7 +480,8 @@
         "symptoms": [
             "Ansiedade",
             "Empatia"
-        ]
+        ],
+        "id": 44
     },
     {
         "childId": 17,
@@ -461,7 +491,8 @@
         "symptoms": [
             "Mau-humor",
             "Motivação"
-        ]
+        ],
+        "id": 45
     },
     {
         "childId": 18,
@@ -471,7 +502,8 @@
         "symptoms": [
             "Criatividade",
             "Foco"
-        ]
+        ],
+        "id": 46
     },
     {
         "childId": 19,
@@ -481,7 +513,8 @@
         "symptoms": [
             "Agressividade",
             "Empatia"
-        ]
+        ],
+        "id": 47
     },
     {
         "childId": 20,
@@ -491,6 +524,7 @@
         "symptoms": [
             "Ansiedade",
             "Empatia"
-        ]
+        ],
+        "id": 48
     }
 ]
