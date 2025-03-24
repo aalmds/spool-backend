@@ -61,8 +61,9 @@ CREATE TABLE "Record" (
     "id" SERIAL NOT NULL,
     "childId" INTEGER NOT NULL,
     "authorId" INTEGER NOT NULL,
-    "authorRole" TEXT NOT NULL,
+    "authorRole" TEXT NOT NULL, 
     "content" TEXT NOT NULL,
+    "authorName" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Record_pkey" PRIMARY KEY ("id")
