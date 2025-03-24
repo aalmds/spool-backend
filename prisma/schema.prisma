@@ -67,6 +67,7 @@ model Record {
   childId    Int
   authorId   Int
   authorRole String
+  authorName String
   content    String
   createdAt  DateTime     @default(now())
   symptoms   String[]
