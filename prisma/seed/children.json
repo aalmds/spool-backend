@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "Jo\u00e3o Silva",
     "parentName": "Maria Silva",
     "email": "maria.silva@example.com",
@@ -18,7 +17,6 @@
     "class": "Turma 7A"
   },
   {
-    "id": 2,
     "name": "Ana Costa",
     "parentName": "Carlos Costa",
     "email": "carlos.costa@example.com",
@@ -38,7 +36,6 @@
     "class": "Turma 8B"
   },
   {
-    "id": 3,
     "name": "Pedro Almeida",
     "parentName": "Fernanda Almeida",
     "email": "fernanda.almeida@example.com",
@@ -54,7 +51,6 @@
     "class": "Turma 9A"
   },
   {
-    "id": 4,
     "name": "Mariana Rocha",
     "parentName": "Ricardo Rocha",
     "email": "ricardo.rocha@example.com",
@@ -72,7 +68,6 @@
     "class": "Turma 6B"
   },
   {
-    "id": 5,
     "name": "Lucas Fernandes",
     "parentName": "Patr\u00edcia Fernandes",
     "email": "patricia.fernandes@example.com",
@@ -91,7 +86,6 @@
     "class": "Turma 8A"
   },
   {
-    "id": 6,
     "name": "Sofia Lima",
     "parentName": "Roberto Lima",
     "email": "roberto.lima@example.com",
@@ -107,7 +101,6 @@
     "class": "Turma 9B"
   },
   {
-    "id": 7,
     "name": "Gabriel Santos",
     "parentName": "Juliana Santos",
     "email": "juliana.santos@example.com",
@@ -126,7 +119,6 @@
     "class": "Turma 10A"
   },
   {
-    "id": 8,
     "name": "Laura Oliveira",
     "parentName": "Marcos Oliveira",
     "email": "marcos.oliveira@example.com",
@@ -145,7 +137,6 @@
     "class": "Turma 5B"
   },
   {
-    "id": 9,
     "name": "Enzo Pereira",
     "parentName": "Cristina Pereira",
     "email": "cristina.pereira@example.com",
@@ -163,7 +154,6 @@
     "class": "Turma 9A"
   },
   {
-    "id": 10,
     "name": "Valentina Souza",
     "parentName": "Ant\u00f4nio Souza",
     "email": "antonio.souza@example.com",
@@ -182,7 +172,6 @@
     "class": "Turma 8B"
   },
   {
-    "id": 11,
     "name": "Rafael Gon\u00e7alves",
     "parentName": "Isabela Gon\u00e7alves",
     "email": "isabela.goncalves@example.com",
@@ -199,7 +188,6 @@
     "class": "Turma 10A"
   },
   {
-    "id": 12,
     "name": "Beatriz Martins",
     "parentName": "Felipe Martins",
     "email": "felipe.martins@example.com",
@@ -217,7 +205,6 @@
     "class": "Turma 5B"
   },
   {
-    "id": 13,
     "name": "Davi Ribeiro",
     "parentName": "Luciana Ribeiro",
     "email": "luciana.ribeiro@example.com",
@@ -236,7 +223,6 @@
     "class": "Turma 9A"
   },
   {
-    "id": 14,
     "name": "Helena Carvalho",
     "parentName": "Gustavo Carvalho",
     "email": "gustavo.carvalho@example.com",
@@ -255,7 +241,6 @@
     "class": "Turma 8B"
   },
   {
-    "id": 15,
     "name": "Arthur Lopes",
     "parentName": "Tatiane Lopes",
     "email": "tatiane.lopes@example.com",
@@ -273,7 +258,6 @@
     "class": "Turma 10A"
   },
   {
-    "id": 16,
     "name": "Alice Barbosa",
     "parentName": "Rodrigo Barbosa",
     "email": "rodrigo.barbosa@example.com",
@@ -293,7 +277,6 @@
     "class": "Turma 6B"
   },
   {
-    "id": 17,
     "name": "Bernardo Nunes",
     "parentName": "Camila Nunes",
     "email": "camila.nunes@example.com",
@@ -311,7 +294,6 @@
     "class": "Turma 9A"
   },
   {
-    "id": 18,
     "name": "Clara Mendes",
     "parentName": "Eduardo Mendes",
     "email": "eduardo.mendes@example.com",
@@ -330,7 +312,6 @@
     "class": "Turma 8B"
   },
   {
-    "id": 19,
     "name": "Luiz Castro",
     "parentName": "Amanda Castro",
     "email": "amanda.castro@example.com",
@@ -348,7 +329,6 @@
     "class": "Turma 10A"
   },
   {
-    "id": 20,
     "name": "Isabel Ferreira",
     "parentName": "Bruno Ferreira",
     "email": "bruno.ferreira@example.com",
