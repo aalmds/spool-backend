@@ -11,8 +11,8 @@ class TherapistRoutesService {
       return this.therapistRoutesRepository.getTherapist(ChildId);
    }
 
-   sendToken(therapistId: number) {
-      return this.therapistRoutesRepository.sendToken(therapistId);
+   createTherapist(name: string, email: string, licenseNumber: string, specialization: string) {
+      return this.therapistRoutesRepository.createTherapist(name, email, licenseNumber, specialization);
    }
 
 }

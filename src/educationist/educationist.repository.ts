@@ -21,8 +21,11 @@ class EducationistRoutesRepository {
          specialization: filter
        },
        select: {
-         name: true,
-         specialization: true
+        id: true,
+        name: true,
+        specialization: true,
+        token: true,
+        email: true,
       },
      });
    } catch (e) {

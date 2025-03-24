@@ -20,7 +20,12 @@ class TherapistRoutesRepository {
          },
        },
        select: {
-         name: true
+        id: true,
+        name: true,
+        specialization: true,
+        token: true,
+        email: true,
+        licenseNumber: true
       },
      });
    } catch (e) {
@@ -29,10 +34,21 @@ class TherapistRoutesRepository {
    }
  }
 
- public async sendToken(therapistId: number): Promise<any> {
-  const id = therapistId
-}
+  public async createTherapist(name: string, email: string, licenseNumber: string, specialization: string): Promise<any> {
+    try {
+      await this.prisma.therapist.create({
+          data: {
+            name: name,
+            specialization: specialization,
+            email: email,
+            licenseNumber: licenseNumber
+          },
+      });
+    } catch (e) {
+      console.error(Errors.CREATE_THERAPIST, e);
+      throw new Error(Errors.CREATE_THERAPIST);
+    }
 
+  }
 }
-
 export default TherapistRoutesRepository;

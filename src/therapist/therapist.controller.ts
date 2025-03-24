@@ -29,16 +29,16 @@ class TherapistRoutesController {
       }
    }
 
-   public async sendToken(req: Request, res: Response): Promise<void> {
+   public async createTherapist(req: Request, res: Response): Promise<void> {
       try {
-         const { therapistId } = req.body;
-         await this.therapistRoutesService.sendToken(therapistId);
+         const { name, email, licenseNumber, specialization } = req.body;
+         await this.therapistRoutesService.createTherapist(name, email, licenseNumber, specialization);
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
          }).handle(res);
       } catch (e) {
          new FailureResult({
-            msg: Errors.SEND_TOKEN,
+            msg: Errors.CREATE_THERAPIST,
          }).handle(res);
       }
    }
@@ -46,7 +46,7 @@ class TherapistRoutesController {
 
    public initRoutes() {
       this.router.get('/therapist/:childId', (req, res) => this.getTherapist(req, res));
-      this.router.post('/therapist', (req, res) => this.sendToken(req, res)); 
+      this.router.post('/therapist', (req, res) => this.createTherapist(req, res)); 
    }
 
 }

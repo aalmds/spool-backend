@@ -20,7 +20,14 @@ class ChildRoutesRepository {
          },
        },
        select: {
-         name: true,
+        id: true,
+        name: true,
+        parentName: true,
+        email: true,
+        birthDate: true,
+        supportLevel: true,
+        class: true,
+        token: true,
       },
      });
    } catch (e) {
@@ -40,7 +47,14 @@ class ChildRoutesRepository {
          },
        },
        select: {
-         name: true,
+        id: true,
+        name: true,
+        parentName: true,
+        email: true,
+        birthDate: true,
+        supportLevel: true,
+        class: true,
+        token: true,
       },
      });
    } catch (e) {
