@@ -3,7 +3,7 @@ import { Roles } from "../common/roles";
 
 class RecordService {
   private recordRepository: RecordRepository;
-  private validRoles = [Roles.Child, Roles.Educationist, Roles.Therapist];
+  private validRoles: string[] = [Roles.Child, Roles.Educationist, Roles.Therapist];
   constructor(recordRepository: RecordRepository) {
       this.recordRepository = recordRepository;
   }
@@ -43,6 +43,13 @@ class RecordService {
   async getRecordsByEducationist(educationistId: number, status?: boolean, limit?: number, page?: number) {
     ({ page, limit } = this.getPagination(page, limit));
     return this.recordRepository.getRecordsByEducationist(educationistId, limit!, page!, status);
+  }
+
+  async createRecord(childId: number, authorId: number, authorRole: string, content: string, symptoms: string[]) {
+    if (!this.validRoles.includes(authorRole)) {
+      throw new Error('Invalid role');
+    }
+    return this.recordRepository.createRecord(childId, authorId, authorRole, content, symptoms);
   }
 }
 

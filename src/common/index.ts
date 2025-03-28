@@ -9,6 +9,10 @@ import EducationistRoutesService from "../educationist/educationist.service";
 import EducationistRoutesRepository from "../educationist/educationist.repository";  
 import TherapistRoutesService from "../therapist/therapist.service";  
 import TherapistRoutesRepository from "../therapist/therapist.repository";  
+import NotificationRepository from "../notification/notification.repository";
+import NotificationService from "../notification/notification.service";
+import UserRepository from "../user/user.repository";
+import UserService from "../user/user.service";
 
 export const injector = new Injector();
 
@@ -61,3 +65,24 @@ injector.registerService(
    TherapistRoutesService,  
    new TherapistRoutesService(injector.getRepository(TherapistRoutesRepository))  
 ); 
+
+injector.registerRepository(
+    UserRepository, 
+    new UserRepository()
+);
+
+injector.registerService(
+    UserService,
+    new UserService(injector.getRepository(UserRepository))
+);
+
+
+injector.registerRepository(
+    NotificationRepository, 
+    new NotificationRepository()
+ );
+ 
+ injector.registerService(
+    NotificationService,
+    new NotificationService(injector.getRepository(NotificationRepository))
+ );
