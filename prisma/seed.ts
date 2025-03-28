@@ -8,30 +8,74 @@ function randomNumber(length: number) {
 }
 
 function readJSON() {
-  const records = JSON.parse(fs.readFileSync('./seed/records.json', 'utf8'));
-  const educationists =
-      JSON.parse(fs.readFileSync('./seed/educationists.json', 'utf8'));
-  const therapists =
-      JSON.parse(fs.readFileSync('./seed/therapists.json', 'utf8'));
-  const children = JSON.parse(fs.readFileSync('./seed/children.json', 'utf8'));
+  const records: Record[] = JSON.parse(fs.readFileSync('seed/records.json', 'utf8'));
+  const educationists: Educationist[] =
+      JSON.parse(fs.readFileSync('seed/educationists.json', 'utf8'));
+  const therapists: Therapist[] =
+      JSON.parse(fs.readFileSync('seed/therapists.json', 'utf8'));
+  const children: Child[] = JSON.parse(fs.readFileSync('seed/children.json', 'utf8'));
+  // parse birthdates
+  children.forEach((child: Child) => {
+    if (!child.birthDate) {
+      return;
+    }
+    child.birthDate = new Date(child.birthDate);
+  });
+
   return {records, educationists, therapists, children};
 }
 
-interface Child {
+export interface Record {
+  id: number;
+  childId: number;
+  authorId: number;
+  authorName: string;
+  authorRole: string;
+  content: string;
+  symptoms?: string[];
+}
+
+export interface Child {
   id: number;
   name: string;
   parentName: string;
   email: string;
   class: string;
-  birthDate: string;
-  supportLevel: number;
-  token: string;
-  educationists: number[];
-  therapists: number[];
+  birthDate: Date;
+  supportLevel?: number | null;
+  token?: string;
+  createdAt?: Date;
+  educationists?: number[];
+  therapists?: number[];
 }
+
+export interface Educationist {
+  id: number;
+  name: string;
+  email: string;
+  specialization?: string | null;
+  children?: number[];
+  createdAt?: Date;
+  token?: string;
+}
+
+export interface Therapist {
+  id: number;
+  name: string;
+  email: string;
+  specialization?: string | null;
+  licenseNumber: string;
+  children?: number[];
+  createdAt?: Date;
+  token?: string;
+}
+
 
 async function createChildRelations(child: Child) {
   try {
+    if (!child.educationists || !child.therapists) {
+      throw new Error('Child must have educationists and therapists');
+    }
     for (const educationistId of child.educationists) {
       // if already exists, skip
       const existingChildEducationist =
@@ -77,11 +121,28 @@ async function createChildRelations(child: Child) {
   }
 }
 
+function getIDbyAuthorName(name: string, role: string, children: Child[], educationists: Educationist[], therapists: Therapist[]) {
+  if (role === 'Child') { 
+    return children.find(child => child.parentName === name)?.id;
+  }
+  if (role === 'Educationist') {
+    return educationists.find(educationist => educationist.name === name)?.id;
+  }
+  if (role === 'Therapist') {
+    return therapists.find(therapist => therapist.name === name)?.id;
+  }
+}
+
 
 async function main() {
-  const {records, educationists, therapists, children} = readJSON();
+  var {
+    records: recordsJSON, 
+    educationists: educationistsJSON, 
+    therapists: therapistsJSON, 
+    children: childrenJSON
+  } = readJSON();
 
-  for (const educationist of educationists) {
+  for (const educationist of educationistsJSON) {
     // if already exists, skip
     const existingEducationist = await prisma.educationist.findFirst({
       where: {email: educationist.email},
@@ -93,7 +154,6 @@ async function main() {
 
     await prisma.educationist.create({
       data: {
-        id: educationist.id,
         name: educationist.name,
         email: educationist.email,
         specialization: educationist.specialization
@@ -101,7 +161,16 @@ async function main() {
     });
   }
 
-  for (const therapist of therapists) {
+  //update
+  var educationists: Educationist[] = await prisma.educationist.findMany()
+  for (var i = 0; i < educationists.length; i++) {
+    educationists[i].children = educationistsJSON[i].children;
+    if (educationists[i].email !== educationists[i].email) {
+        throw new Error(`Educationist Email ${educationists[i].email} is different`);
+    }
+  }
+
+  for (const therapist of therapistsJSON) {
     // if already exists, skip
     const existingTherapist = await prisma.therapist.findFirst({
       where: {email: therapist.email},
@@ -113,7 +182,6 @@ async function main() {
 
     await prisma.therapist.create({
       data: {
-        id: therapist.id,
         name: therapist.name,
         email: therapist.email,
         specialization: therapist.specialization,
@@ -122,7 +190,16 @@ async function main() {
     });
   }
 
-  for (const child of children) {
+  // update
+  var therapists: Therapist[] = await prisma.therapist.findMany()
+  for (var i = 0; i < therapists.length; i++) {
+    therapists[i].children = therapistsJSON[i].children;
+    if (therapists[i].email !== therapists[i].email) {
+        throw new Error(`Therapist Email ${therapists[i].email} is different`);
+    }
+  }
+
+  for (const child of childrenJSON) {
     // if already exists, skip
     const existingChild = await prisma.child.findFirst({
       where: {email: child.email},
@@ -134,7 +211,6 @@ async function main() {
 
     await prisma.child.create({
       data: {
-        id: child.id,
         name: child.name,
         parentName: child.parentName,
         email: child.email,
@@ -146,23 +222,42 @@ async function main() {
     });
   }
 
+  // update
+  var children: Child[] = await prisma.child.findMany()
+  for (var i = 0; i < children.length; i++) {
+    children[i].educationists = childrenJSON[i].educationists;
+    children[i].therapists = childrenJSON[i].therapists;
+    if (children[i].email !== children[i].email) {
+        throw new Error(`Child Email ${children[i].email} is different`);
+    }
+  }
+
   for (const child of children) {
     await createChildRelations(child);
   }
 
-  for (const record of records) {
+  for (const record of recordsJSON) {
+    const authorID = getIDbyAuthorName(record.authorName, record.authorRole, children, educationists, therapists);
+    if (!authorID) {
+      console.error(`Author not found: ${record.authorName}`);
+      continue;
+    }
     var existingRecord = await prisma.record.findFirst({
       where: {
-        id: record.id,
+        childId: record.childId,
+        authorId: authorID,
+        authorRole: record.authorRole,
+        authorName: record.authorName,
+        content: record.content
       },
     });
     if (!existingRecord) {
       existingRecord = await prisma.record.create({
         data: {
-          id: record.id,
           childId: record.childId,
-          authorId: record.authorId,
+          authorId: authorID,
           authorRole: record.authorRole,
+          authorName: record.authorName,
           content: record.content,
           symptoms: record.symptoms,
         },

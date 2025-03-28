@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Dr. Ricardo Almeida",
         "email": "ricardo.almeida@example.com",
         "licenseNumber": "CRP-01/12345",
@@ -10,7 +9,6 @@
         ]
     },
     {
-        "id": 2,
         "name": "Dra. Sofia Rocha",
         "email": "sofia.rocha@example.com",
         "licenseNumber": "CRP-02/12345",
@@ -21,7 +19,6 @@
         ]
     },
     {
-        "id": 3,
         "name": "Dr. Pedro Costa",
         "email": "pedro.costa@example.com",
         "licenseNumber": "CREFITO-01/54321",
@@ -33,7 +30,6 @@
         ]
     },
     {
-        "id": 4,
         "name": "Dra. Luiza Fernandes",
         "email": "luiza.fernandes@example.com",
         "licenseNumber": "CRP-03/12345",
@@ -43,7 +39,6 @@
         ]
     },
     {
-        "id": 5,
         "name": "Dr. Gabriel Santos",
         "email": "gabriel.santos@example.com",
         "licenseNumber": "CREFITO-02/54321",
@@ -54,7 +49,6 @@
         ]
     },
     {
-        "id": 6,
         "name": "Dra. Carla Oliveira",
         "email": "carla.oliveira@example.com",
         "licenseNumber": "CRP-04/12345",
@@ -64,7 +58,6 @@
         ]
     },
     {
-        "id": 7,
         "name": "Dr. Lucas Pereira",
         "email": "lucas.pereira@example.com",
         "licenseNumber": "CRP-05/12345",
@@ -75,7 +68,6 @@
         ]
     },
     {
-        "id": 8,
         "name": "Dra. Mariana Gonçalves",
         "email": "mariana.goncalves@example.com",
         "licenseNumber": "CREFITO-03/54321",
@@ -85,7 +77,6 @@
         ]
     },
     {
-        "id": 9,
         "name": "Dr. Rafael Martins",
         "email": "rafael.martins@example.com",
         "licenseNumber": "CRP-06/12345",
@@ -96,7 +87,6 @@
         ]
     },
     {
-        "id": 10,
         "name": "Dra. Beatriz Nunes",
         "email": "beatriz.nunes@example.com",
         "licenseNumber": "CRP-07/12345",
@@ -106,7 +96,6 @@
         ]
     },
     {
-        "id": 11,
         "name": "Dr. Arthur Castro",
         "email": "arthur.castro@example.com",
         "licenseNumber": "CREFITO-04/54321",
@@ -116,7 +105,6 @@
         ]
     },
     {
-        "id": 12,
         "name": "Dra. Laura Ferreira",
         "email": "laura.ferreira@example.com",
         "licenseNumber": "CRP-08/12345",
@@ -127,7 +115,6 @@
         ]
     },
     {
-        "id": 13,
         "name": "Dr. Enzo Barbosa",
         "email": "enzo.barbosa@example.com",
         "licenseNumber": "CRP-09/12345",
@@ -137,7 +124,6 @@
         ]
     },
     {
-        "id": 14,
         "name": "Dra. Clara Mendes",
         "email": "clara.mendes@example.com",
         "licenseNumber": "CREFITO-05/54321",
@@ -147,7 +133,6 @@
         ]
     },
     {
-        "id": 15,
         "name": "Dr. Bernardo Lopes",
         "email": "bernardo.lopes@example.com",
         "licenseNumber": "CRP-10/12345",
@@ -157,7 +142,6 @@
         ]
     },
     {
-        "id": 16,
         "name": "Dra. Alice Castro",
         "email": "alice.castro@example.com",
         "licenseNumber": "CRP-11/12345",
@@ -167,7 +151,6 @@
         ]
     },
     {
-        "id": 17,
         "name": "Dr. Davi Ribeiro",
         "email": "davi.ribeiro@example.com",
         "licenseNumber": "CREFITO-06/54321",
@@ -177,7 +160,6 @@
         ]
     },
     {
-        "id": 18,
         "name": "Dra. Valentina Souza",
         "email": "valentina.souza@example.com",
         "licenseNumber": "CRP-12/12345",
@@ -187,7 +169,6 @@
         ]
     },
     {
-        "id": 19,
         "name": "Dr. Luiz Carvalho",
         "email": "luiz.carvalho@example.com",
         "licenseNumber": "CRP-13/12345",
@@ -197,7 +178,6 @@
         ]
     },
     {
-        "id": 20,
         "name": "Dra. Isabel Ferreira",
         "email": "isabel.ferreira@example.com",
         "licenseNumber": "CREFITO-07/54321",
