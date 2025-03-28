@@ -7,6 +7,8 @@ import NotificationController from '../notification/notification.controller';
 
 import { Router } from 'express';
 import { injector } from '.';
+import UserController from '../user/user.controller';
+import UserService from '../user/user.service';
 
 export function initStatusRoutes(router: Router) {
    const controller = new ReadRecordController(router, injector.getService(ReadRecordService));
@@ -18,5 +20,9 @@ export function initRecordRoutes(router: Router) {
 }
 export function initNotificationRoutes(router: Router) {
    const controller = new NotificationController(router, injector.getService(NotificationService));
+   controller.initRoutes();
+}
+export function initUserRoute(router: Router) {
+   const controller = new UserController(router, injector.getService(UserService));
    controller.initRoutes();
 }
