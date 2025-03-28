@@ -45,11 +45,11 @@ class RecordService {
     return this.recordRepository.getRecordsByEducationist(educationistId, limit!, page!, status);
   }
 
-  async createRecord(childId: number, authorId: number, authorRole: string, content: string, symptoms: string[]) {
+  async createRecord(childId: number, authorId: number, authorRole: string, authorName:string, content: string, symptoms: string[]) {
     if (!this.validRoles.includes(authorRole)) {
       throw new Error('Invalid role');
     }
-    return this.recordRepository.createRecord(childId, authorId, authorRole, content, symptoms);
+    return this.recordRepository.createRecord(childId, authorId, authorRole, authorName, content, symptoms);
   }
 }
 

@@ -107,13 +107,14 @@ class RecordRepository {
     }
   }
 
-  public async createRecord(childId: number, authorId: number, authorRole: string, content: string, symptoms?: string[]): Promise<any> {
+  public async createRecord(childId: number, authorId: number, authorRole: string, authorName: string,  content: string, symptoms?: string[]): Promise<any> {
     try {
       return await this.prisma.record.create({
         data: {
           childId: childId,
           authorId: authorId,
           authorRole: authorRole,
+          authorName: authorName,
           content: content,
           symptoms: symptoms,
         },

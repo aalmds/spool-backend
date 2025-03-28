@@ -124,11 +124,12 @@ class RecordController {
 
     async createRecord(req: Request, res: Response) : Promise<void> {
         try {
-            const { childId, authorId, authorRole, content, symptoms } = req.body;
+            const { childId, authorId, authorRole, authorName, content, symptoms } = req.body;
             const record = await this.recordService.createRecord(
                 childId,
                 authorId,
                 authorRole,
+                authorName,
                 content,
                 symptoms
             );

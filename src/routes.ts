@@ -11,9 +11,6 @@ initChildRoutes(router);
 // Routes for status
 initStatusRoutes(router);
 
-// Routes for symptoms
-router.get('/symptoms');
-
 // Routes for educationist
 initEducationistRoutes(router)
 
