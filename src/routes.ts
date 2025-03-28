@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { initRecordRoutes, initStatusRoutes, initUserRoute } from './common/init-routes';
+import { initRecordRoutes, initStatusRoutes, initUserRoute, initNotificationRoutes } from './common/init-routes';
 const router = Router();
 
 // Routes group for record
@@ -21,6 +21,9 @@ router.get('/educationist/:educationistId/child');
 // Routes for therapists
 router.get('/therapist/:therapistId/child');
 router.post('/therapist'); 
+
+// Routes for notifications
+initNotificationRoutes(router);
 
 // Routes for user
 initUserRoute(router);

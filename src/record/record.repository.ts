@@ -106,6 +106,23 @@ class RecordRepository {
       throw new Error(Errors.GET_RECORDS);
     }
   }
+
+  public async createRecord(childId: number, authorId: number, authorRole: string, content: string, symptoms?: string[]): Promise<any> {
+    try {
+      return await this.prisma.record.create({
+        data: {
+          childId: childId,
+          authorId: authorId,
+          authorRole: authorRole,
+          content: content,
+          symptoms: symptoms,
+        },
+      });
+    } catch (e) {
+      console.error(Errors.CREATE_RECORD, e);
+      throw new Error(Errors.CREATE_RECORD);
+    }
+  }
 }
 
 export default RecordRepository;

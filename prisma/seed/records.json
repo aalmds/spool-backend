@@ -1,530 +1,530 @@
 [
-  {
-    "childId": 1,
-    "authorId": 5,
-    "authorRole": "Educationist",
-    "content": "Está se comportando muito bem na escola, sempre colaborando com os colegas e respeitando os turnos de fala. No entanto, ainda precisa de ajuda para se manter focado nas atividades mais longas.",
-    "symptoms": [
-      "Foco",
-      "Agitação"
-    ],
-    "authorName": "Patrícia Costa"
-  },
-  {
-    "childId": 11,
-    "authorId": 7,
-    "authorRole": "Therapist",
-    "content": "Tem demonstrado grande interesse nas atividades, mas ainda tem dificuldades em lidar com a frustração quando algo não sai como o esperado. Está aprendendo a pedir ajuda quando necessário.",
-    "symptoms": [
-      "Mau-humor",
-      "Bom-humor"
-    ],
-    "authorName": "Dr. Lucas Pereira"
-  },
-  {
-    "childId": 11,
-    "authorId": 10,
-    "authorRole": "Educationist",
-    "content": "Tem mostrado ótimo progresso nas interações sociais, mas tende a ficar sobrecarregado em ambientes muito movimentados, o que gera algum estresse.",
-    "symptoms": [
-      "Agitação",
-      "Gritos"
-    ],
-    "authorName": "Antônio Souza"
-  },
-  {
-    "childId": 2,
-    "authorId": 15,
-    "authorRole": "Therapist",
-    "content": "Está mais envolvido nas atividades de grupo, mas ainda apresenta resistência a mudanças de rotina, o que exige paciência e apoio.",
-    "symptoms": [
-      "Mau-humor",
-      "Foco"
-    ],
-    "authorName": "Dr. Bernardo Lopes"
-  },
-  {
-    "childId": 1,
-    "authorId": 12,
-    "authorRole": "Educationist",
-    "content": "Tem mostrado muito entusiasmo por novas atividades, porém às vezes se torna excessivamente ansioso quando não consegue terminar algo rapidamente.",
-    "symptoms": [
-      "Agitação",
-      "Mau-humor"
-    ],
-    "authorName": "Felipe Martins"
-  },
-  {
-    "childId": 6,
-    "authorId": 19,
-    "authorRole": "Educationist",
-    "content": "É muito atento aos detalhes e adora observar o que acontece ao seu redor, mas em algumas situações prefere não participar de discussões em grupo.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
-    "authorName": "Bruno Ferreira"
-  },
-  {
-    "childId": 1,
-    "authorId": 18,
-    "authorRole": "Educationist",
-    "content": "Está evoluindo bem na gestão das suas emoções e está mais participativo nas atividades escolares, embora precise de lembretes frequentes para seguir os passos das tarefas.",
-    "symptoms": [
-      "Foco",
-      "Bom-humor"
-    ],
-    "authorName": "Amanda Castro"
-  },
-  {
-    "childId": 1,
-    "authorId": 7,
-    "authorRole": "Therapist",
-    "content": "Adora participar de atividades de leitura, mas às vezes se perde na tarefa e precisa de mais apoio para finalizar.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
-    "authorName": "Dr. Lucas Pereira"
-  },
-  {
-    "childId": 7,
-    "authorId": 14,
-    "authorRole": "Educationist",
-    "content": "Tem sido muito sociável e gentil, mas pode se sentir sobrecarregado em ambientes com muitas pessoas, o que às vezes leva a comportamentos de evitamento.",
-    "symptoms": [
-      "Agitação",
-      "Mau-humor"
-    ],
-    "authorName": "Gustavo Carvalho"
-  },
-  {
-    "childId": 1,
-    "authorId": 5,
-    "authorRole": "Educationist",
-    "content": "Está se saindo muito bem nas atividades motoras, mas ainda tem dificuldades em iniciar interações com os outros sem orientação.",
-    "symptoms": [
-      "Foco",
-      "Bom-humor"
-    ],
-    "authorName": "Patrícia Costa"
-  },
-  {
-    "childId": 1,
-    "authorId": 12,
-    "authorRole": "Educationist",
-    "content": "Adora participar de atividades e está bem focado nas tarefas, mas ainda precisa de ajuda para organizar suas ideias e ações de maneira independente.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
-    "authorName": "Felipe Martins"
-  },
-  {
-    "childId": 1,
-    "authorId": 7,
-    "authorRole": "Therapist",
-    "content": "Está bem atenta às instruções e tem seguido a rotina escolar com bastante consistência, embora ainda precise de ajuda com a comunicação não verbal.",
-    "symptoms": [
-      "Foco",
-      "Bom-humor"
-    ],
-    "authorName": "Dr. Lucas Pereira"
-  },
-  {
-    "childId": 3,
-    "authorId": 8,
-    "authorRole": "Educationist",
-    "content": "Tem demonstrado mais interesse nas interações sociais e tem feito progressos significativos, mas ainda precisa de orientação nas atividades em grupo.",
-    "symptoms": [
-      "Bom-humor",
-      "Criatividade"
-    ],
+      {
+            "childId": 1,
+            "authorId": 5,
+            "authorRole": "Educationist",
+            "content": "Está se comportando muito bem na escola, sempre colaborando com os colegas e respeitando os turnos de fala. No entanto, ainda precisa de ajuda para se manter focado nas atividades mais longas.",
+            "symptoms": [
+                  "Foco",
+                  "Agitação"
+            ],
+            "authorName": "Patrícia Costa"
+      },
+      {
+            "childId": 11,
+            "authorId": 7,
+            "authorRole": "Therapist",
+            "content": "Tem demonstrado grande interesse nas atividades, mas ainda tem dificuldades em lidar com a frustração quando algo não sai como o esperado. Está aprendendo a pedir ajuda quando necessário.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Bom-humor"
+            ],
+            "authorName": "Dr. Lucas Pereira"
+      },
+      {
+            "childId": 11,
+            "authorId": 10,
+            "authorRole": "Educationist",
+            "content": "Tem mostrado ótimo progresso nas interações sociais, mas tende a ficar sobrecarregado em ambientes muito movimentados, o que gera algum estresse.",
+            "symptoms": [
+                  "Agitação",
+                  "Gritos"
+            ],
+            "authorName": "Antônio Souza"
+      },
+      {
+            "childId": 2,
+            "authorId": 15,
+            "authorRole": "Therapist",
+            "content": "Está mais envolvido nas atividades de grupo, mas ainda apresenta resistência a mudanças de rotina, o que exige paciência e apoio.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Foco"
+            ],
+            "authorName": "Dr. Bernardo Lopes"
+      },
+      {
+            "childId": 1,
+            "authorId": 12,
+            "authorRole": "Educationist",
+            "content": "Tem mostrado muito entusiasmo por novas atividades, porém às vezes se torna excessivamente ansioso quando não consegue terminar algo rapidamente.",
+            "symptoms": [
+                  "Agitação",
+                  "Mau-humor"
+            ],
+            "authorName": "Felipe Martins"
+      },
+      {
+            "childId": 6,
+            "authorId": 19,
+            "authorRole": "Educationist",
+            "content": "É muito atento aos detalhes e adora observar o que acontece ao seu redor, mas em algumas situações prefere não participar de discussões em grupo.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
+            "authorName": "Bruno Ferreira"
+      },
+      {
+            "childId": 1,
+            "authorId": 18,
+            "authorRole": "Educationist",
+            "content": "Está evoluindo bem na gestão das suas emoções e está mais participativo nas atividades escolares, embora precise de lembretes frequentes para seguir os passos das tarefas.",
+            "symptoms": [
+                  "Foco",
+                  "Bom-humor"
+            ],
+            "authorName": "Amanda Castro"
+      },
+      {
+            "childId": 1,
+            "authorId": 7,
+            "authorRole": "Therapist",
+            "content": "Adora participar de atividades de leitura, mas às vezes se perde na tarefa e precisa de mais apoio para finalizar.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
+            "authorName": "Dr. Lucas Pereira"
+      },
+      {
+            "childId": 7,
+            "authorId": 14,
+            "authorRole": "Educationist",
+            "content": "Tem sido muito sociável e gentil, mas pode se sentir sobrecarregado em ambientes com muitas pessoas, o que às vezes leva a comportamentos de evitamento.",
+            "symptoms": [
+                  "Agitação",
+                  "Mau-humor"
+            ],
+            "authorName": "Gustavo Carvalho"
+      },
+      {
+            "childId": 1,
+            "authorId": 5,
+            "authorRole": "Educationist",
+            "content": "Está se saindo muito bem nas atividades motoras, mas ainda tem dificuldades em iniciar interações com os outros sem orientação.",
+            "symptoms": [
+                  "Foco",
+                  "Bom-humor"
+            ],
+            "authorName": "Patrícia Costa"
+      },
+      {
+            "childId": 1,
+            "authorId": 12,
+            "authorRole": "Educationist",
+            "content": "Adora participar de atividades e está bem focado nas tarefas, mas ainda precisa de ajuda para organizar suas ideias e ações de maneira independente.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
+            "authorName": "Felipe Martins"
+      },
+      {
+            "childId": 1,
+            "authorId": 7,
+            "authorRole": "Therapist",
+            "content": "Está bem atenta às instruções e tem seguido a rotina escolar com bastante consistência, embora ainda precise de ajuda com a comunicação não verbal.",
+            "symptoms": [
+                  "Foco",
+                  "Bom-humor"
+            ],
+            "authorName": "Dr. Lucas Pereira"
+      },
+      {
+            "childId": 3,
+            "authorId": 8,
+            "authorRole": "Educationist",
+            "content": "Tem demonstrado mais interesse nas interações sociais e tem feito progressos significativos, mas ainda precisa de orientação nas atividades em grupo.",
+            "symptoms": [
+                  "Bom-humor",
+                  "Criatividade"
+            ],
+            "authorName": "Eduardo Mendes"
+      },
+      {
+            "childId": 9,
+            "authorId": 17,
+            "authorRole": "Therapist",
+            "content": "Está com uma boa atitude em relação às atividades, mas pode se sentir mais confortável com mais tempo e apoio para concluir as tarefas.",
+            "symptoms": [
+                  "Foco",
+                  "Agitação"
+            ],
+            "authorName": "Dr. Davi Ribeiro"
+      },
+      {
+                    "childId": 3,
+            "authorId": 8,
+            "authorRole": "Educationist",
+            "content": "Tem mostrado grande interesse em matemática, mas ainda precisa de ajuda para resolver problemas mais complexos.",
+            "symptoms": [
+                  "Foco",
+                  "Motivação"
+            ],
     "authorName": "Eduardo Mendes"
-  },
-  {
-    "childId": 9,
-    "authorId": 17,
-    "authorRole": "Therapist",
-    "content": "Está com uma boa atitude em relação às atividades, mas pode se sentir mais confortável com mais tempo e apoio para concluir as tarefas.",
-    "symptoms": [
-      "Foco",
-      "Agitação"
-    ],
-    "authorName": "Dr. Davi Ribeiro"
-  },
-  {
-    "childId": 3,
-    "authorId": 8,
-    "authorRole": "Educationist",
-    "content": "Tem mostrado grande interesse em matemática, mas ainda precisa de ajuda para resolver problemas mais complexos.",
-    "symptoms": [
-      "Foco",
-      "Motivação"
-    ],
-    "authorName": "Eduardo Mendes"
-  },
-  {
-    "childId": 15,
-    "authorId": 15,
-    "authorRole": "Educationist",
-    "content": "Está mais confiante em suas habilidades sociais, mas ainda demonstra ansiedade em situações novas.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 15,
+            "authorId": 15,
+            "authorRole": "Educationist",
+            "content": "Está mais confiante em suas habilidades sociais, mas ainda demonstra ansiedade em situações novas.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
     "authorName": "Tatiane Lopes"
-  },
-  {
-    "childId": 12,
-    "authorId": 11,
-    "authorRole": "Educationist",
-    "content": "Está mais participativo nas aulas de ciências, mas ainda se distrai com facilidade.",
-    "symptoms": [
-      "Distração",
-      "Criatividade"
-    ],
+      },
+      {
+                    "childId": 12,
+            "authorId": 11,
+            "authorRole": "Educationist",
+            "content": "Está mais participativo nas aulas de ciências, mas ainda se distrai com facilidade.",
+            "symptoms": [
+                  "Distração",
+                  "Criatividade"
+            ],
     "authorName": "Isabela Gonçalves"
-  },
-  {
-    "childId": 18,
-    "authorId": 12,
-    "authorRole": "Educationist",
-    "content": "Tem mostrado progresso na expressão de suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 18,
+            "authorId": 12,
+            "authorRole": "Educationist",
+            "content": "Tem mostrado progresso na expressão de suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
     "authorName": "Felipe Martins"
-  },
-  {
-    "childId": 9,
-    "authorId": 9,
-    "authorRole": "Educationist",
-    "content": "Tem se destacado nas atividades artísticas, mas ainda precisa de ajuda para manter o foco em tarefas mais longas.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
+      },
+      {
+                    "childId": 9,
+            "authorId": 9,
+            "authorRole": "Educationist",
+            "content": "Tem se destacado nas atividades artísticas, mas ainda precisa de ajuda para manter o foco em tarefas mais longas.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
     "authorName": "Cristina Pereira"
-  },
-  {
-    "childId": 20,
-    "authorId": 18,
-    "authorRole": "Therapist",
-    "content": "Está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 20,
+            "authorId": 18,
+            "authorRole": "Therapist",
+            "content": "Está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
     "authorName": "Dra. Valentina Souza"
-  },
-  {
-    "childId": 14,
-    "authorId": 13,
-    "authorRole": "Educationist",
-    "content": "Está mais engajado nas atividades escolares, mas ainda se distrai com facilidade em ambientes barulhentos.",
-    "symptoms": [
-      "Distração",
-      "Motivação"
-    ],
+      },
+      {
+                    "childId": 14,
+            "authorId": 13,
+            "authorRole": "Educationist",
+            "content": "Está mais engajado nas atividades escolares, mas ainda se distrai com facilidade em ambientes barulhentos.",
+            "symptoms": [
+                  "Distração",
+                  "Motivação"
+            ],
     "authorName": "Luciana Ribeiro"
-  },
-  {
-    "childId": 6,
-    "authorId": 3,
-    "authorRole": "Therapist",
-    "content": "Tem mostrado mais empatia pelos colegas, mas ainda precisa de apoio para lidar com a ansiedade em situações sociais.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 6,
+            "authorId": 3,
+            "authorRole": "Therapist",
+            "content": "Tem mostrado mais empatia pelos colegas, mas ainda precisa de apoio para lidar com a ansiedade em situações sociais.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
     "authorName": "Dr. Pedro Costa"
-  },
-  {
-    "childId": 8,
-    "authorId": 6,
-    "authorRole": "Educationist",
-    "content": "Tem se saído muito bem nas atividades de grupo, mas ainda precisa de ajuda para liderar de forma eficaz.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
+      },
+      {
+                    "childId": 8,
+            "authorId": 6,
+            "authorRole": "Educationist",
+            "content": "Tem se saído muito bem nas atividades de grupo, mas ainda precisa de ajuda para liderar de forma eficaz.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
     "authorName": "Marcos Oliveira"
-  },
-  {
-    "childId": 17,
-    "authorId": 3,
-    "authorRole": "Educationist",
-    "content": "Está mais tranquilo em situações de conflito, mas ainda demonstra agressividade em momentos de estresse.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 17,
+            "authorId": 3,
+            "authorRole": "Educationist",
+            "content": "Está mais tranquilo em situações de conflito, mas ainda demonstra agressividade em momentos de estresse.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
     "authorName": "Fernanda Lima"
-  },
-  {
-    "childId": 10,
-    "authorId": 4,
-    "authorRole": "Educationist",
-    "content": "Está mais focado nas atividades de leitura, mas ainda se distrai com facilidade em ambientes movimentados.",
-    "symptoms": [
-      "Distração",
-      "Foco"
-    ],
+      },
+      {
+                    "childId": 10,
+            "authorId": 4,
+            "authorRole": "Educationist",
+            "content": "Está mais focado nas atividades de leitura, mas ainda se distrai com facilidade em ambientes movimentados.",
+            "symptoms": [
+                  "Distração",
+                  "Foco"
+            ],
     "authorName": "Roberto Alves"
-  },
-  {
-    "childId": 19,
-    "authorId": 4,
-    "authorRole": "Educationist",
-    "content": "Tem mostrado mais controle sobre suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 19,
+            "authorId": 4,
+            "authorRole": "Educationist",
+            "content": "Tem mostrado mais controle sobre suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
     "authorName": "Roberto Alves"
-  },
-  {
-    "childId": 16,
-    "authorId": 17,
-    "authorRole": "Educationist",
-    "content": "Tem se destacado nas atividades de escrita, mas ainda precisa de ajuda para organizar suas ideias.",
-    "symptoms": [
-      "Criatividade",
-      "Foco"
-    ],
+      },
+      {
+                    "childId": 16,
+            "authorId": 17,
+            "authorRole": "Educationist",
+            "content": "Tem se destacado nas atividades de escrita, mas ainda precisa de ajuda para organizar suas ideias.",
+            "symptoms": [
+                  "Criatividade",
+                  "Foco"
+            ],
     "authorName": "Camila Nunes"
-  },
-  {
-    "childId": 1,
-    "authorId": 5,
-    "authorRole": "Educationist",
-    "content": "Está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
+      },
+      {
+                    "childId": 1,
+            "authorId": 5,
+            "authorRole": "Educationist",
+            "content": "Está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
     "authorName": "Patrícia Costa"
-  },
-  {
-    "childId": 1,
-    "authorId": 1,
-    "authorRole": "Child",
-    "content": "João está se adaptando bem à escola, mas ainda precisa de ajuda para se concentrar nas tarefas mais longas.",
-    "symptoms": [
-      "Foco",
-      "Agitação"
-    ],
-    "authorName": "Maria Silva"
-  },
-  {
-    "childId": 2,
-    "authorId": 2,
-    "authorRole": "Child",
-    "content": "Ana tem sido muito participativa nas atividades escolares, mas ainda fica ansiosa em situações novas.",
-    "symptoms": [
-      "Ansiedade",
-      "Bom-humor"
-    ],
-    "authorName": "Carlos Costa"
-  },
-  {
-    "childId": 3,
-    "authorId": 3,
-    "authorRole": "Child",
-    "content": "Pedro está mais confiante nas interações sociais, mas ainda tem dificuldades com mudanças de rotina.",
-    "symptoms": [
-      "Mau-humor",
-      "Foco"
-    ],
-    "authorName": "Fernanda Almeida"
-  },
-  {
-    "childId": 4,
-    "authorId": 4,
-    "authorRole": "Child",
-    "content": "Mariana adora ajudar nas tarefas domésticas, mas às vezes se distrai com facilidade.",
-    "symptoms": [
-      "Distração",
-      "Criatividade"
-    ],
-    "authorName": "Ricardo Rocha"
-  },
-  {
-    "childId": 5,
-    "authorId": 5,
-    "authorRole": "Child",
-    "content": "Lucas está mais tranquilo e disposto a interagir, mas ainda precisa de apoio para lidar com frustrações.",
-    "symptoms": [
-      "Mau-humor",
-      "Motivação"
-    ],
-    "authorName": "Patrícia Fernandes"
-  },
-  {
-    "childId": 6,
-    "authorId": 6,
-    "authorRole": "Child",
-    "content": "Sofia tem mostrado grande interesse em atividades artísticas, mas ainda precisa de ajuda para manter o foco.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
-    "authorName": "Roberto Lima"
-  },
-  {
-    "childId": 7,
-    "authorId": 7,
-    "authorRole": "Child",
-    "content": "Gabriel está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
-    "authorName": "Juliana Santos"
-  },
-  {
-    "childId": 8,
-    "authorId": 8,
-    "authorRole": "Child",
-    "content": "Laura tem sido muito carinhosa com a família, mas ainda precisa de ajuda para lidar com a frustração.",
-    "symptoms": [
-      "Mau-humor",
-      "Empatia"
-    ],
-    "authorName": "Marcos Oliveira"
-  },
-  {
-    "childId": 9,
-    "authorId": 9,
-    "authorRole": "Child",
-    "content": "Enzo está mais engajado nas atividades escolares, mas ainda se distrai com facilidade em ambientes barulhentos.",
-    "symptoms": [
-      "Distração",
-      "Motivação"
-    ],
-    "authorName": "Cristina Pereira"
-  },
-  {
-    "childId": 10,
-    "authorId": 10,
-    "authorRole": "Child",
-    "content": "Valentina tem mostrado mais empatia pelos colegas, mas ainda precisa de apoio para lidar com a ansiedade.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
-    "authorName": "Antônio Souza"
-  },
-  {
-    "childId": 11,
-    "authorId": 11,
-    "authorRole": "Child",
-    "content": "Rafael está mais disposto a tentar novas atividades, mas ainda pode ficar frustrado quando não consegue algo rapidamente.",
-    "symptoms": [
-      "Mau-humor",
-      "Motivação"
-    ],
-    "authorName": "Isabela Gonçalves"
-  },
-  {
-    "childId": 12,
-    "authorId": 12,
-    "authorRole": "Child",
-    "content": "Beatriz tem se saído muito bem nas atividades de grupo, mas ainda precisa de ajuda para liderar de forma eficaz.",
-    "symptoms": [
-      "Foco",
-      "Criatividade"
-    ],
-    "authorName": "Felipe Martins"
-  },
-  {
-    "childId": 13,
-    "authorId": 13,
-    "authorRole": "Child",
-    "content": "Davi está mais tranquilo em situações de conflito, mas ainda demonstra agressividade em momentos de estresse.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
-    "authorName": "Luciana Ribeiro"
-  },
-  {
-    "childId": 14,
-    "authorId": 14,
-    "authorRole": "Child",
-    "content": "Helena tem sido muito atenciosa com os irmãos, mas ainda precisa de ajuda para lidar com a frustração.",
-    "symptoms": [
-      "Mau-humor",
-      "Empatia"
-    ],
-    "authorName": "Gustavo Carvalho"
-  },
-  {
-    "childId": 15,
-    "authorId": 15,
-    "authorRole": "Child",
-    "content": "Arthur está mais focado nas atividades de leitura, mas ainda se distrai com facilidade em ambientes movimentados.",
-    "symptoms": [
-      "Distração",
-      "Foco"
-    ],
-    "authorName": "Tatiane Lopes"
-  },
-  {
-    "childId": 16,
-    "authorId": 16,
-    "authorRole": "Child",
-    "content": "Alice tem mostrado mais controle sobre suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
-    "authorName": "Rodrigo Barbosa"
-  },
-  {
-    "childId": 17,
-    "authorId": 17,
-    "authorRole": "Child",
-    "content": "Bernardo está mais motivado a ajudar em casa, mas ainda pode ficar frustrado quando as coisas não saem como o esperado.",
-    "symptoms": [
-      "Mau-humor",
-      "Motivação"
-    ],
-    "authorName": "Camila Nunes"
-  },
-  {
-    "childId": 18,
-    "authorId": 18,
-    "authorRole": "Child",
-    "content": "Clara tem se destacado nas atividades de escrita, mas ainda precisa de ajuda para organizar suas ideias.",
-    "symptoms": [
-      "Criatividade",
-      "Foco"
-    ],
-    "authorName": "Eduardo Mendes"
-  },
-  {
-    "childId": 19,
-    "authorId": 19,
-    "authorRole": "Child",
-    "content": "Luiz está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
-    "symptoms": [
-      "Agressividade",
-      "Empatia"
-    ],
-    "authorName": "Amanda Castro"
-  },
-  {
-    "childId": 20,
-    "authorId": 20,
-    "authorRole": "Child",
-    "content": "Isabel está mais confortável em ambientes novos, mas ainda precisa de apoio para se adaptar a mudanças inesperadas.",
-    "symptoms": [
-      "Ansiedade",
-      "Empatia"
-    ],
-    "authorName": "Bruno Ferreira"
-  }
+      },
+      {
+            "childId": 1,
+            "authorId": 1,
+            "authorRole": "Child",
+            "content": "João está se adaptando bem à escola, mas ainda precisa de ajuda para se concentrar nas tarefas mais longas.",
+            "symptoms": [
+                  "Foco",
+                  "Agitação"
+            ],
+            "authorName": "Maria Silva"
+      },
+      {
+            "childId": 2,
+            "authorId": 2,
+            "authorRole": "Child",
+            "content": "Ana tem sido muito participativa nas atividades escolares, mas ainda fica ansiosa em situações novas.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Bom-humor"
+            ],
+            "authorName": "Carlos Costa"
+      },
+      {
+            "childId": 3,
+            "authorId": 3,
+            "authorRole": "Child",
+            "content": "Pedro está mais confiante nas interações sociais, mas ainda tem dificuldades com mudanças de rotina.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Foco"
+            ],
+            "authorName": "Fernanda Almeida"
+      },
+      {
+            "childId": 4,
+            "authorId": 4,
+            "authorRole": "Child",
+            "content": "Mariana adora ajudar nas tarefas domésticas, mas às vezes se distrai com facilidade.",
+            "symptoms": [
+                  "Distração",
+                  "Criatividade"
+            ],
+            "authorName": "Ricardo Rocha"
+      },
+      {
+            "childId": 5,
+            "authorId": 5,
+            "authorRole": "Child",
+            "content": "Lucas está mais tranquilo e disposto a interagir, mas ainda precisa de apoio para lidar com frustrações.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Motivação"
+            ],
+            "authorName": "Patrícia Fernandes"
+      },
+      {
+            "childId": 6,
+            "authorId": 6,
+            "authorRole": "Child",
+            "content": "Sofia tem mostrado grande interesse em atividades artísticas, mas ainda precisa de ajuda para manter o foco.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
+            "authorName": "Roberto Lima"
+      },
+      {
+            "childId": 7,
+            "authorId": 7,
+            "authorRole": "Child",
+            "content": "Gabriel está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
+            "authorName": "Juliana Santos"
+      },
+      {
+            "childId": 8,
+            "authorId": 8,
+            "authorRole": "Child",
+            "content": "Laura tem sido muito carinhosa com a família, mas ainda precisa de ajuda para lidar com a frustração.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Empatia"
+            ],
+            "authorName": "Marcos Oliveira"
+      },
+      {
+            "childId": 9,
+            "authorId": 9,
+            "authorRole": "Child",
+            "content": "Enzo está mais engajado nas atividades escolares, mas ainda se distrai com facilidade em ambientes barulhentos.",
+            "symptoms": [
+                  "Distração",
+                  "Motivação"
+            ],
+            "authorName": "Cristina Pereira"
+      },
+      {
+            "childId": 10,
+            "authorId": 10,
+            "authorRole": "Child",
+            "content": "Valentina tem mostrado mais empatia pelos colegas, mas ainda precisa de apoio para lidar com a ansiedade.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
+            "authorName": "Antônio Souza"
+      },
+      {
+            "childId": 11,
+            "authorId": 11,
+            "authorRole": "Child",
+            "content": "Rafael está mais disposto a tentar novas atividades, mas ainda pode ficar frustrado quando não consegue algo rapidamente.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Motivação"
+            ],
+            "authorName": "Isabela Gonçalves"
+      },
+      {
+            "childId": 12,
+            "authorId": 12,
+            "authorRole": "Child",
+            "content": "Beatriz tem se saído muito bem nas atividades de grupo, mas ainda precisa de ajuda para liderar de forma eficaz.",
+            "symptoms": [
+                  "Foco",
+                  "Criatividade"
+            ],
+            "authorName": "Felipe Martins"
+      },
+      {
+            "childId": 13,
+            "authorId": 13,
+            "authorRole": "Child",
+            "content": "Davi está mais tranquilo em situações de conflito, mas ainda demonstra agressividade em momentos de estresse.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
+            "authorName": "Luciana Ribeiro"
+      },
+      {
+            "childId": 14,
+            "authorId": 14,
+            "authorRole": "Child",
+            "content": "Helena tem sido muito atenciosa com os irmãos, mas ainda precisa de ajuda para lidar com a frustração.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Empatia"
+            ],
+            "authorName": "Gustavo Carvalho"
+      },
+      {
+            "childId": 15,
+            "authorId": 15,
+            "authorRole": "Child",
+            "content": "Arthur está mais focado nas atividades de leitura, mas ainda se distrai com facilidade em ambientes movimentados.",
+            "symptoms": [
+                  "Distração",
+                  "Foco"
+            ],
+            "authorName": "Tatiane Lopes"
+      },
+      {
+            "childId": 16,
+            "authorId": 16,
+            "authorRole": "Child",
+            "content": "Alice tem mostrado mais controle sobre suas emoções, mas ainda precisa de apoio para lidar com a ansiedade.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
+            "authorName": "Rodrigo Barbosa"
+      },
+      {
+            "childId": 17,
+            "authorId": 17,
+            "authorRole": "Child",
+            "content": "Bernardo está mais motivado a ajudar em casa, mas ainda pode ficar frustrado quando as coisas não saem como o esperado.",
+            "symptoms": [
+                  "Mau-humor",
+                  "Motivação"
+            ],
+            "authorName": "Camila Nunes"
+      },
+      {
+            "childId": 18,
+            "authorId": 18,
+            "authorRole": "Child",
+            "content": "Clara tem se destacado nas atividades de escrita, mas ainda precisa de ajuda para organizar suas ideias.",
+            "symptoms": [
+                  "Criatividade",
+                  "Foco"
+            ],
+            "authorName": "Eduardo Mendes"
+      },
+      {
+            "childId": 19,
+            "authorId": 19,
+            "authorRole": "Child",
+            "content": "Luiz está mais calmo e controlado, mas ainda demonstra agressividade em situações de conflito.",
+            "symptoms": [
+                  "Agressividade",
+                  "Empatia"
+            ],
+            "authorName": "Amanda Castro"
+      },
+      {
+            "childId": 20,
+            "authorId": 20,
+            "authorRole": "Child",
+            "content": "Isabel está mais confortável em ambientes novos, mas ainda precisa de apoio para se adaptar a mudanças inesperadas.",
+            "symptoms": [
+                  "Ansiedade",
+                  "Empatia"
+            ],
+            "authorName": "Bruno Ferreira"
+      }
 ]

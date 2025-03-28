@@ -1,15 +1,18 @@
 import { Errors } from "../common/errors";
 import { FailureResult, Result, SuccessResult } from "../common/results";
 import RecordService from "./record.service";
+import NotificationService from "../notification/notification.service";
 import { Router, Request, Response } from 'express';
 
 class RecordController {
     public router: Router;
     private recordService: RecordService;
+    private notificationService: NotificationService;
 
-    constructor(router: Router, recordService: RecordService) {
+    constructor(router: Router, recordService: RecordService, notificationService: NotificationService) {
         this.router = router;
         this.recordService = recordService;
+        this.notificationService = notificationService;
         this.initRoutes();
     }
 
@@ -119,12 +122,41 @@ class RecordController {
         }
     }
 
+    async createRecord(req: Request, res: Response) : Promise<void> {
+        try {
+            const { childId, authorId, authorRole, content, symptoms } = req.body;
+            const record = await this.recordService.createRecord(
+                childId,
+                authorId,
+                authorRole,
+                content,
+                symptoms
+            );
+
+            await this.notificationService.broadcastNotification(
+                childId,
+                authorId,
+                authorRole
+            );
+
+            new SuccessResult({
+                msg: Result.transformRequestOnMsg(req),
+                data: record
+            }).handle(res);
+        } catch (error) {
+            new FailureResult({
+                msg: Errors.CREATE_RECORD
+            }).handle(res);
+        }
+    }
+
     public initRoutes() {
         this.router.get('/record/child/:childId', async (req, res) => this.getByChild(req, res));
         this.router.get('/record/child/:childId/therapist/:therapistId', async (req, res) => this.getByChildAndTherapist(req, res));
         this.router.get('/record/child/:childId/educationist/:educationistId', async (req, res) => this.getByChildAndEducationist(req, res));
         this.router.get('/record/educationist/:educationistId', async (req, res) => this.getByEducationist(req, res));
         this.router.get('/record/therapist/:therapistId', async (req, res) => this.getByTherapist(req, res));
+        this.router.post('/record', async (req, res) => this.createRecord(req, res));
     }
 }
 

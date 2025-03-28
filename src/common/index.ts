@@ -3,6 +3,8 @@ import RecordRepository from "../record/record.repository";
 import RecordService from "../record/record.service";
 import ReadRecordRepository from "../read-record/read-record.repository";
 import ReadRecordService from "../read-record/read-record.service";
+import NotificationRepository from "../notification/notification.repository";
+import NotificationService from "../notification/notification.service";
 import UserRepository from "../user/user.repository";
 import UserService from "../user/user.service";
 
@@ -37,3 +39,14 @@ injector.registerService(
     UserService,
     new UserService(injector.getRepository(UserRepository))
 );
+
+
+injector.registerRepository(
+    NotificationRepository, 
+    new NotificationRepository()
+ );
+ 
+ injector.registerService(
+    NotificationService,
+    new NotificationService(injector.getRepository(NotificationRepository))
+ );
