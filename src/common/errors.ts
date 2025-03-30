@@ -14,4 +14,5 @@ export enum Errors {
   SAVE_DEVICE_TOKEN = 'Error when saving device token in database.',
   GET_USER_INFO = 'Error when getting user info from database.',
   SEND_NOTIFICATION = 'Error when sending notification.',
+  INVALID_ROLE = 'Invalid role! Valid roles are Child, Therapist, and Educationist.',
 }

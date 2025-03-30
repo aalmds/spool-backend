@@ -151,6 +151,29 @@ class RecordController {
         }
     }
 
+    public async getUnreadRecords(req: Request, res: Response): Promise<void> {
+        try {
+            const { userId } = req.params;
+            var { role, page, limit } = req.query;
+            
+            const unreadRecords = await this.recordService.getUnreadRecords(
+                Number(userId),
+                String(role),
+                Number(limit),
+                Number(page)
+            );
+            
+            new SuccessResult({
+                msg: Result.transformRequestOnMsg(req),
+                data: unreadRecords,
+            }).handle(res);
+        } catch (e) {
+            new FailureResult({
+                msg: Errors.GET_UNREAD_RECORDS,
+            }).handle(res);
+        }
+    }
+
     public initRoutes() {
         this.router.get('/record/child/:childId', async (req, res) => this.getByChild(req, res));
         this.router.get('/record/child/:childId/therapist/:therapistId', async (req, res) => this.getByChildAndTherapist(req, res));
@@ -158,6 +181,7 @@ class RecordController {
         this.router.get('/record/educationist/:educationistId', async (req, res) => this.getByEducationist(req, res));
         this.router.get('/record/therapist/:therapistId', async (req, res) => this.getByTherapist(req, res));
         this.router.post('/record', async (req, res) => this.createRecord(req, res));
+        this.router.get('/alerts/:userId', (req, res) => this.getUnreadRecords(req, res));
     }
 }
 
