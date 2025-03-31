@@ -11,10 +11,6 @@ class ReadRecordService {
       return this.readRecordRepository.readRecord(recordId, userId, userRole);
    }
 
-   getUnreadRecords(userId: number) {
-      return this.readRecordRepository.getUnreadRecordsFromDatabase(userId);
-   }
-
    getReadRecord(recordId: number) {
       return this.readRecordRepository.getReadRecord(recordId);
    }

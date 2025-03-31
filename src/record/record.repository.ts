@@ -8,12 +8,19 @@ class RecordRepository {
     this.prisma = new PrismaClient();
   }
 
-  public async getRecordsByChild(childId: number, limit: number, page: number, role?: string): Promise<any[]> {
+  public async getRecordsByChild(childId: number, limit: number, page: number, role?: string, status?: boolean): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {
           childId,
           ...(role && { authorRole: { equals: role, mode: "insensitive" } }),
+          ...(status === false && {
+            reads: { none: { 
+                userId: childId,
+                userRole: {contains: Roles.Child, mode: 'insensitive'}
+              }
+            }
+          })
         },
         take: limit,
         skip: (page - 1) * limit,
@@ -84,7 +91,7 @@ class RecordRepository {
     }
   }
 
-  public async getRecordsByEducationist(educationistId: number, limit: number, page: number, status?: boolean, ): Promise<any[]> {
+  public async getRecordsByEducationist(educationistId: number, limit: number, page: number, status?: boolean): Promise<any[]> {
     try {
       return await this.prisma.record.findMany({
         where: {

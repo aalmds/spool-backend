@@ -1,5 +1,6 @@
 import RecordRepository from "./record.repository";
 import { Roles } from "../common/roles";
+import { Errors } from "../common/errors";
 
 class RecordService {
   private recordRepository: RecordRepository;
@@ -50,6 +51,25 @@ class RecordService {
       throw new Error('Invalid role');
     }
     return this.recordRepository.createRecord(childId, authorId, authorRole, authorName, content, symptoms);
+  }
+
+  async getUnreadRecords(
+    userId: number, 
+    authorRole: string,
+    limit: number,
+    page: number
+  ): Promise<any> {
+    ({ page, limit } = this.getPagination(page, limit));
+    switch (authorRole) {
+       case Roles.Educationist:
+          return await this.recordRepository.getRecordsByEducationist(userId, limit, page, false);
+       case Roles.Child:
+          return await this.recordRepository.getRecordsByChild(userId, limit, page, undefined, false);
+       case Roles.Therapist:
+          return await this.recordRepository.getRecordsByTherapist(userId, limit, page, false);
+       default:
+          throw new Error(Errors.INVALID_ROLE);
+   }
   }
 }
 

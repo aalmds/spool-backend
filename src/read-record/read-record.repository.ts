@@ -29,35 +29,9 @@ class ReadRecordRepository {
     }
   }
 
-  public async getUnreadRecordsFromDatabase(userId: number): Promise<any[]> {
-   try {
-      const readRecordIds = await this.prisma.recordRead.findMany({
-         where: {
-           userId: userId
-         },
-         select: {
-           recordId: true,
-         },
-      }).then(records => records.map(record => record.recordId));
-   
-      const unreadRecords = await this.prisma.record.findMany({
-         where: {
-            id: {
-               in: readRecordIds,
-            },
-         },
-      });
-
-      return unreadRecords;
-   } catch (e) {
-      console.error(Errors.GET_UNREAD_RECORDS, e);
-      throw new Error(Errors.GET_UNREAD_RECORDS);
-   }
- }
-
    public async getReadRecord(recordId: number): Promise<any> {
       try {
-         return await this.prisma.recordRead.findFirst({
+         return await this.prisma.recordRead.findMany({
             where: {
                recordId,
             },
