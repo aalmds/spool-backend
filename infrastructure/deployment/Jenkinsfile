@@ -33,6 +33,7 @@ pipeline {
                 dbPort = credentials("DB_PORT")
                 appEnv = credentials("APP_ENV")
                 appPort = credentials("APP_PORT")
+                databaseUrl = credentials("DATABASE_URL")
             }
 
             steps {
@@ -47,6 +48,7 @@ pipeline {
                             def encodedDbPort = sh(script: "echo -n '${dbPort}' | base64", returnStdout: true).trim()
                             def encodedAppEnv = sh(script: "echo -n '${appEnv}' | base64", returnStdout: true).trim()
                             def encodedAppPort = sh(script: "echo -n '${appPort}' | base64", returnStdout: true).trim()
+                            def encodedDatabaseUrl = sh(script: "echo -n '${databaseUrl}' | base64", returnStdout: true).trim()
 
                             sh """
                                 sed -i "s|__DB_NAME__|${encodedDbName}|g" ./infrastructure/k8s/secrets.yaml
@@ -56,6 +58,7 @@ pipeline {
                                 sed -i "s|__DB_PORT__|${encodedDbPort}|g" ./infrastructure/k8s/secrets.yaml
                                 sed -i "s|__ENV__|${encodedAppEnv}|g" ./infrastructure/k8s/secrets.yaml
                                 sed -i "s|__PORT__|${encodedAppPort}|g" ./infrastructure/k8s/secrets.yaml
+                                sed -i "s|__DATABASE_URL__|${encodedDatabaseUrl}|g" ./infrastructure/k8s/secrets.yaml
                                 kubectl apply -f ./infrastructure/k8s/secrets.yaml
                             """
                         }
