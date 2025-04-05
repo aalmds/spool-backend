@@ -16,6 +16,7 @@ class UserController {
 
     public async getUserbyToken(req: Request, res: Response) {
         try {
+            console.log('????????????');
             const userToken: string = req.params.userToken;
             const user = await this.userService.getUserByToken(userToken);
             new SuccessResult({
