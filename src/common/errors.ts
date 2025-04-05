@@ -8,6 +8,7 @@ export enum Errors {
   GET_CHILDREN_BY_EDUCATIONIST = 'Error when getting children by educationist.',
   GET_CHILDREN_BY_THERAPIST = 'Error when getting children by therapist',
   CREATE_THERAPIST = 'Error when creating therapist',
+  CREATE_CHILD_THERAPIST = 'Error when creating child therapist',
   GET_RECORDS = 'Error when getting records from database.',
   GET_USER = 'Error when getting user from database.',
   CREATE_RECORD = 'Error when creating record in database.',

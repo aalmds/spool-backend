@@ -34,9 +34,9 @@ class TherapistRoutesRepository {
    }
  }
 
-  public async createTherapist(name: string, email: string, licenseNumber: string, specialization: string): Promise<any> {
+  public async createTherapist(name: string, email: string, licenseNumber: string, specialization: string) {
     try {
-      await this.prisma.therapist.create({
+      return await this.prisma.therapist.create({
           data: {
             name: name,
             specialization: specialization,
@@ -49,6 +49,20 @@ class TherapistRoutesRepository {
       throw new Error(Errors.CREATE_THERAPIST);
     }
 
+  }
+
+  public async createChildTherapist(childId: number, therapistId: number): Promise<any> {
+    try {
+      await this.prisma.childTherapist.create({
+        data: {
+          childId: childId,
+          therapistId: therapistId
+        }
+      });
+    } catch (e) {
+      console.error(Errors.CREATE_CHILD_THERAPIST, e);
+      throw new Error(Errors.CREATE_CHILD_THERAPIST);
+    }
   }
 }
 export default TherapistRoutesRepository;

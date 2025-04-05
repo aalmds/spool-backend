@@ -11,8 +11,10 @@ class TherapistRoutesService {
       return this.therapistRoutesRepository.getTherapist(ChildId);
    }
 
-   createTherapist(name: string, email: string, licenseNumber: string, specialization: string) {
-      return this.therapistRoutesRepository.createTherapist(name, email, licenseNumber, specialization);
+   async createTherapist(name: string, email: string, licenseNumber: string, specialization: string, childId: number) {
+      const therapist = await this.therapistRoutesRepository.createTherapist(name, email, licenseNumber, specialization);
+      await this.therapistRoutesRepository.createChildTherapist(childId, therapist.id);
+      return therapist;
    }
 
 }
