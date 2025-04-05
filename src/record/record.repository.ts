@@ -37,8 +37,6 @@ class RecordRepository {
       return await this.prisma.record.findMany({
         where: {
           childId: childId,
-          authorId: therapistId,
-          authorRole: Roles.Therapist,
         },
         take: limit,
         skip: (page - 1) * limit,
@@ -55,8 +53,7 @@ class RecordRepository {
       return await this.prisma.record.findMany({
         where: {
           childId: childId,
-          authorId: educationistId,
-          authorRole: Roles.Educationist,
+          authorRole: { in: [Roles.Educationist, Roles.Child] },
         },
         take: limit,
         skip: (page - 1) * limit,

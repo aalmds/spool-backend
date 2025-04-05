@@ -31,8 +31,8 @@ class TherapistRoutesController {
 
    public async createTherapist(req: Request, res: Response): Promise<void> {
       try {
-         const { name, email, licenseNumber, specialization } = req.body;
-         await this.therapistRoutesService.createTherapist(name, email, licenseNumber, specialization);
+         const { name, email, licenseNumber, specialization, childId } = req.body;
+         await this.therapistRoutesService.createTherapist(name, email, licenseNumber, specialization, childId);
          new SuccessResult({
             msg: Result.transformRequestOnMsg(req),
          }).handle(res);
